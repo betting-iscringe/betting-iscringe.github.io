@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import { FilterFilled } from "@ant-design/icons";
 import { Table, Typography, Dropdown, Input, Tooltip, Select } from "antd";
-import "antd/dist/antd.dark.css";
 import "./styles.css";
 
 import Fights from "./Fights";
