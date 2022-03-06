@@ -4695,12 +4695,13 @@ export default {
         ],
       },
     },
+
     "71d03090-0a48-41f0-b83d-622dc4c43e6b": {
       id: "71d03090-0a48-41f0-b83d-622dc4c43e6b",
       topic: "/vt/ League 2 - Day 3, Match 6",
       open: true,
-      winOption: null,
-      totalPool: 19404999,
+      winOption: 1,
+      totalPool: 48264999,
       closingTime: 1646596234893,
       options: [
         {
@@ -4719,15 +4720,21 @@ export default {
       userBets: {
         0: [
           {
+            userid: "a68abd17-8311-4bd3-a4c5-a0998c920dc9",
+            username: "TowaBaby",
+            betAmount: 260000,
+            option: 0,
+          },
+          {
             userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
             username: "Patrick Bateman",
             betAmount: 1000000,
             option: 0,
           },
           {
-            userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
-            username: "TFRBATTLERISGAY",
-            betAmount: 5000,
+            userid: "5c9cbdc9-6f1a-4996-8607-3b9ff915e8ef",
+            username: "🎪 𝐘𝐨𝐧𝐣𝐮 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐬 𝐊.𝐊.",
+            betAmount: 3000000,
             option: 0,
           },
           {
@@ -4743,8 +4750,56 @@ export default {
             option: 0,
           },
           {
+            userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+            username: "[造] Triangle Consulting",
+            betAmount: 4000000,
+            option: 0,
+          },
+          {
+            userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+            username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+            betAmount: 15000,
+            option: 0,
+          },
+          {
+            userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+            username: "Ars Vie",
+            betAmount: 100000,
+            option: 0,
+          },
+          {
+            userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+            username: "TFRBATTLERISGAY",
+            betAmount: 5000,
+            option: 0,
+          },
+          {
+            userid: "a22cbe54-e3fe-4b09-94a6-35977700e15e",
+            username: "WilfridTiedemann",
+            betAmount: 5000,
+            option: 0,
+          },
+          {
+            userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+            username: "towasamarich",
+            betAmount: 60000,
+            option: 0,
+          },
+          {
             userid: "1da7c649-ade5-4538-8605-17c4a6fe6cae",
             username: "butwhy",
+            betAmount: 2000000,
+            option: 0,
+          },
+          {
+            userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+            username: "The Tampa Bay Buccaneers",
+            betAmount: 1000000,
+            option: 0,
+          },
+          {
+            userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+            username: "[造] ChronoBanks",
             betAmount: 2000000,
             option: 0,
           },
@@ -4755,9 +4810,9 @@ export default {
             option: 0,
           },
           {
-            userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
-            username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
-            betAmount: 15000,
+            userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+            username: "Takoside",
+            betAmount: 2000000,
             option: 0,
           },
           {
@@ -4768,6 +4823,12 @@ export default {
           },
         ],
         1: [
+          {
+            userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+            username: "Retard",
+            betAmount: 100000,
+            option: 1,
+          },
           {
             userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
             username: "Bombshell Blondes Banking",
@@ -4781,9 +4842,21 @@ export default {
             option: 1,
           },
           {
-            userid: "9c7e9000-e535-454c-855e-176509d89e3e",
-            username: "Asdae",
-            betAmount: 4000000,
+            userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+            username: "s7unned",
+            betAmount: 10000,
+            option: 1,
+          },
+          {
+            userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+            username: "[1 Free Financial Advice]",
+            betAmount: 1000000,
+            option: 1,
+          },
+          {
+            userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+            username: "Acedia",
+            betAmount: 10000,
             option: 1,
           },
           {
@@ -4793,9 +4866,33 @@ export default {
             option: 1,
           },
           {
-            userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
-            username: "Acedia",
+            userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+            username: "Brungus",
             betAmount: 10000,
+            option: 1,
+          },
+          {
+            userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+            username: " MSN-02 Zeong Yo",
+            betAmount: 10000000,
+            option: 1,
+          },
+          {
+            userid: "d508582d-c860-4617-b7e1-f9f48043a2b0",
+            username: "Egocide",
+            betAmount: 5000,
+            option: 1,
+          },
+          {
+            userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+            username: "towasamarich",
+            betAmount: 80000,
+            option: 1,
+          },
+          {
+            userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+            username: "Asdae",
+            betAmount: 4000000,
             option: 1,
           },
           {
@@ -4807,15 +4904,15 @@ export default {
         ],
         2: [
           {
-            userid: "2d0d6d2e-bde1-4da1-a716-1014ef93cc89",
-            username: "become lamy",
-            betAmount: 500000,
+            userid: "a68abd17-8311-4bd3-a4c5-a0998c920dc9",
+            username: "TowaBaby",
+            betAmount: 5000,
             option: 2,
           },
           {
-            userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
-            username: "Imyourtarget",
-            betAmount: 100000,
+            userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+            username: "Retard",
+            betAmount: 50000,
             option: 2,
           },
           {
@@ -4837,9 +4934,15 @@ export default {
             option: 2,
           },
           {
-            userid: "9c7e9000-e535-454c-855e-176509d89e3e",
-            username: "Asdae",
-            betAmount: 29999,
+            userid: "a347e75c-cb24-416c-ae8b-aec40730cd54",
+            username: "Gawrons(๑╹ᆺ╹)",
+            betAmount: 20000,
+            option: 2,
+          },
+          {
+            userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+            username: "[造] Triangle Consulting",
+            betAmount: 4000000,
             option: 2,
           },
           {
@@ -4849,14 +4952,69 @@ export default {
             option: 2,
           },
           {
+            userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+            username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+            betAmount: 15000,
+            option: 2,
+          },
+          {
+            userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+            username: " MSN-02 Zeong Yo",
+            betAmount: 1000000,
+            option: 2,
+          },
+          {
+            userid: "2d0d6d2e-bde1-4da1-a716-1014ef93cc89",
+            username: "become lamy",
+            betAmount: 500000,
+            option: 2,
+          },
+          {
+            userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+            username: "Ars Vie",
+            betAmount: 20000,
+            option: 2,
+          },
+          {
+            userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+            username: "Imyourtarget",
+            betAmount: 100000,
+            option: 2,
+          },
+          {
+            userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+            username: "towasamarich",
+            betAmount: 50000,
+            option: 2,
+          },
+          {
+            userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+            username: "Multi-Level Marketing",
+            betAmount: 50000,
+            option: 2,
+          },
+          {
             userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
             username: "Oyakodon Capital",
             betAmount: 5000,
             option: 2,
           },
+          {
+            userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+            username: "Asdae",
+            betAmount: 29999,
+            option: 2,
+          },
+          {
+            userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+            username: "6letters",
+            betAmount: 20000,
+            option: 2,
+          },
         ],
       },
     },
+
     "f268872f-9686-436e-b72b-d0e887b83366": {
       id: "f268872f-9686-436e-b72b-d0e887b83366",
       topic: "/vt/ League 2 - Day 3, Match 7",
