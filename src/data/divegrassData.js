@@ -5713,7 +5713,7 @@ export default {
       id: "9eafc140-aa26-4235-9765-0309d9097383",
       topic: "/vt/ League 2 - Day 3, Match 9",
       open: true,
-      winOption: null,
+      winOption: 0,
       totalPool: 70038000,
       closingTime: 1646603439113,
       options: [
