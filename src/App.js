@@ -47,12 +47,14 @@ const dataObject = {
   divegrass: { events: Object.keys(divegrassData), data: divegrassData },
   etc: { events: Object.keys(shitData), data: shitData }
 };
+
+const defaultEvent = "divegrass";
 export default function App() {
-  const [event, setEvent] = useState("HFZ");
+  const [event, setEvent] = useState(defaultEvent);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [usernameFilter, setUsernameFilter] = useState("");
   const [eventVisible, setEventVisible] = useState(
-    dataObject.HFZ.events.reduce((a, v) => ({ ...a, [v]: true }), {})
+    dataObject[defaultEvent].events.reduce((a, v) => ({ ...a, [v]: true }), {})
   );
 
   const items = useMemo(() => {
@@ -86,7 +88,7 @@ export default function App() {
               userid,
               username,
               betAmount: 0,
-              winnings: 0
+              winnings: 0,
             };
             user.username = username;
             user.betAmount += amount;
@@ -118,7 +120,7 @@ export default function App() {
       })
       .map((user) => ({
         ...user,
-        profit: user.winnings - user.betAmount
+        profit: user.winnings - user.betAmount,
       }))
       .sort((a, b) => b.profit - a.profit);
   }, [usernameFilter, eventVisible, event]);
@@ -138,7 +140,7 @@ export default function App() {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
-          flexWrap: "wrap"
+          flexWrap: "wrap",
         }}
       >
         <Title level={3} style={{ minWidth: 300 }}>
@@ -150,16 +152,16 @@ export default function App() {
             minWidth: 300,
             padding: 4,
             display: "flex",
-            justifyContent: "flex-end"
+            justifyContent: "flex-end",
           }}
         >
           <Select
-            defaultValue={options[0]}
+            defaultValue={defaultEvent}
             style={{
               width: "8vw",
               minWidth: 150,
               marginTop: "0.5em",
-              marginRight: "1.1vw"
+              marginRight: "1.1vw",
             }}
             onChange={handleEvent}
           >
@@ -192,7 +194,7 @@ export default function App() {
                 style={{
                   fontSize: 19,
                   paddingTop: "0.5em",
-                  marginLeft: "1.1vw"
+                  marginLeft: "1.1vw",
                 }}
                 onClick={(e) => e.preventDefault()}
               />
