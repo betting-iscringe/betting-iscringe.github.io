@@ -16,7 +16,7 @@ const columns = [
     title: "Username",
     dataIndex: "username",
     key: "username",
-    width: 400
+    width: 400,
   },
   {
     title: "Bet amount",
@@ -24,28 +24,28 @@ const columns = [
     key: "betAmount",
     sorter: (a, b) => a.betAmount - b.betAmount,
     render: commaMaker,
-    width: 400
+    width: 400,
   },
   {
     title: "Gross winnings",
     dataIndex: "winnings",
     key: "winnings",
     sorter: (a, b) => a.winnings - b.winnings,
-    render: commaMaker
+    render: commaMaker,
   },
   {
     title: "Profit",
     dataIndex: "profit",
     key: "profit",
     sorter: (a, b) => a.profit - b.profit,
-    render: commaMaker
-  }
+    render: commaMaker,
+  },
 ];
 
 const dataObject = {
   HFZ: { events: Object.keys(data), data },
   divegrass: { events: Object.keys(divegrassData), data: divegrassData },
-  etc: { events: Object.keys(shitData), data: shitData }
+  etc: { events: Object.keys(shitData), data: shitData },
 };
 
 const defaultEvent = "divegrass";
@@ -66,19 +66,38 @@ export default function App() {
     usedEvents.forEach((eventName) => {
       if (!eventVisible[eventName]) return;
       const bettingPools = usedData[eventName];
-      const pools = Object.entries(bettingPools);
-      const breakdown = {};
+      const pools = Object.values(bettingPools);
 
       // Loop through all the pools and record each user's winnings
-      pools.forEach(([key, value]) => {
+      pools.forEach((value) => {
         // Calculate total bet amount for winning choice
-        const { userBets, winOption, totalPool } = value;
+        const { userBets, winOption, totalPool, archive = false } = value;
         if (winOption === null) return;
+
+        // special shit for archive data
+        if (archive) {
+          userBets.forEach(({ userid, username, winAmount }) => {
+            const user = users?.[userid] || {
+              userid,
+              username,
+              betAmount: 0,
+              winnings: 0,
+              profit: 0,
+            };
+            user.username = username;
+
+            // Use ratio of bet amount to total winning bet amount
+            // apply ratio to pool
+            user.profit += winAmount;
+            users[userid] = user;
+          });
+          return;
+        }
+
         const winning = userBets[winOption].reduce(
           (acc, { betAmount }) => acc + betAmount,
           0
         );
-        breakdown[key] = { total: totalPool, winning };
 
         // Loop all bets and record total bet amount and winnings
         const options = Object.values(userBets);
@@ -89,6 +108,7 @@ export default function App() {
               username,
               betAmount: 0,
               winnings: 0,
+              profit: 0,
             };
             user.username = username;
             user.betAmount += amount;
@@ -120,7 +140,7 @@ export default function App() {
       })
       .map((user) => ({
         ...user,
-        profit: user.winnings - user.betAmount,
+        profit: user.profit + (user.winnings - user.betAmount),
       }))
       .sort((a, b) => b.profit - a.profit);
   }, [usernameFilter, eventVisible, event]);

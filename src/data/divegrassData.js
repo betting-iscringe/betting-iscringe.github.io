@@ -3103,7 +3103,1753 @@ export default {
       },
     },
   },
-
+  "Day 2 (only profits)": {
+    "4c5f6e34-48d2-4e2b-8c51-143fb6def141": {
+      id: "4c5f6e34-48d2-4e2b-8c51-143fb6def141",
+      topic: "/vt/ League 2 - Day 2; Game 2",
+      winOption: "1",
+      timestamp: 1646543728161,
+      poolTotal: 50450000,
+      options: [
+        { optionid: 0, option: "/yah/ - Beatani" },
+        { optionid: 1, option: "/hlgg/ - Hololive Global General" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: 6480411.05,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: 398041.1,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: -500000,
+        },
+        {
+          userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+          username: "[造] Triangle Consulting",
+          winAmount: -2000000,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: 27402.06,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: -25000,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: 259216.44,
+        },
+        {
+          userid: "340d2c3b-29b6-48a0-9c85-fe3e740dbd60",
+          username: "ELFSNINENINE",
+          winAmount: -25000,
+        },
+        {
+          userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+          username: "[1 Free Financial Advice]",
+          winAmount: -100000,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: -3000000,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: 97206.17,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: 767649.33,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -2000000,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: -2000000,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: -5000,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: -40000,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: 967061.66,
+        },
+        {
+          userid: "791637fd-9d68-44f7-8fc4-2a41479c2e1c",
+          username: "Anameiguess",
+          winAmount: 129608.22,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: 32402.06,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: 164412.33,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: 32402.06,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: -1100000,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: 5980411.05,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: 922061.66,
+        },
+        {
+          userid: "a68abd17-8311-4bd3-a4c5-a0998c920dc9",
+          username: "TowaBaby",
+          winAmount: 259216.44,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: 32402055.23,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: -5000,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: -20000000,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: 32402.06,
+        },
+        {
+          userid: "f467b1e6-b9f2-4c86-ac4a-e79186a214a9",
+          username: "sanQ",
+          winAmount: -5000,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: -11000000,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: 638041.1,
+        },
+      ],
+    },
+    "39b0411e-58a0-413c-9676-7fd7da534c67": {
+      id: "39b0411e-58a0-413c-9676-7fd7da534c67",
+      topic: "/vt/ League 2 - Day 2; Game 6",
+      winOption: "0",
+      timestamp: 1646543697952,
+      poolTotal: 45155550,
+      options: [
+        { optionid: 0, option: "/wah/ - Ninomae Ina'nis" },
+        { optionid: 1, option: "/koopa/ - Koopa" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: 2154196.82,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: 6541.970000000001,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: 2154196.82,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: -5000,
+        },
+        {
+          userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+          username: "Brungus",
+          winAmount: 21541.97,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: 14041.970000000001,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: -40000,
+        },
+        {
+          userid: "340d2c3b-29b6-48a0-9c85-fe3e740dbd60",
+          username: "ELFSNINENINE",
+          winAmount: -12500,
+        },
+        {
+          userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+          username: "[1 Free Financial Advice]",
+          winAmount: 215419.68,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: -3000000,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: 27312.95,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: -125000,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -3111110,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: 4308393.65,
+        },
+        {
+          userid: "5c9cbdc9-6f1a-4996-8607-3b9ff915e8ef",
+          username: "🎪 𝐘𝐨𝐧𝐣𝐮 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐬 𝐊.𝐊.",
+          winAmount: -10000000,
+        },
+        {
+          userid: "64c0dd4a-eb3a-427d-bf86-64133efb3434",
+          username: "Kitaguni Ltd.",
+          winAmount: -1000000,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: 1077098.41,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: -45000,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -5050000,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: 1077098.41,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: 34625.9,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: 10770.98,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: 1914839.71,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: -250000,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -100000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: 165419.68,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: 1914839.71,
+        },
+        {
+          userid: "a06e2102-d834-46d2-b9fd-956f74efb8fd",
+          username: "IWantAmeToPegMe",
+          winAmount: 2154196.82,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: 6462590.47,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: 5770.98,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: -88888,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: 10770.98,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: 5770.98,
+        },
+        {
+          userid: "e57801e4-8894-43e3-8353-5bbcf52955c2",
+          username: "Irregular",
+          winAmount: 2154196.82,
+        },
+        {
+          userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+          username: "s7unned",
+          winAmount: -10000,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 18259526.29,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: -100000,
+        },
+      ],
+    },
+    "83446d21-b285-49a3-b2bc-f097793fc89c": {
+      id: "83446d21-b285-49a3-b2bc-f097793fc89c",
+      topic: "/vt/ League 2 - Day 2; Game 4",
+      winOption: "1",
+      timestamp: 1646543693409,
+      poolTotal: 34514445,
+      options: [
+        { optionid: 0, option: "/ybc/ - Yubicraft" },
+        { optionid: 1, option: "/wvt/ - Western V-Tubers Thread" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: -1000000,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: -6338.810000000001,
+        },
+        {
+          userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+          username: "[造] Triangle Consulting",
+          winAmount: -3000000,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: -5000,
+        },
+        {
+          userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+          username: "Brungus",
+          winAmount: -10000,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: 22768.660000000003,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: -30000,
+        },
+        {
+          userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+          username: "[1 Free Financial Advice]",
+          winAmount: -500000,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: 4276865.52,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: 28661.19,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: -20000,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -1111111,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: -2000000,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: -5000,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: -50000,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -718388.0700000001,
+        },
+        {
+          userid: "79c5aa12-d3e9-49aa-9b63-5cd3bb5c7e33",
+          username: "BeerSalad",
+          winAmount: -5000,
+        },
+        {
+          userid: "84f5ebde-9629-49f4-b44f-448aa3dc812c",
+          username: "pinkcatmaybegood",
+          winAmount: -5001,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: -50000,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: 8214.919999999998,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: -5000,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: -1100000,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: -200000,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -100000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: -510000,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: -2000000,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: -3000000,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: 4553.73,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: 6369153.38,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: -5000,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: -10000,
+        },
+        {
+          userid: "e57801e4-8894-43e3-8353-5bbcf52955c2",
+          username: "Irregular",
+          winAmount: 3821492.41,
+        },
+        {
+          userid: "e826a836-fe9e-44c4-b869-3880ffd61558",
+          username: "wabi",
+          winAmount: -20000,
+        },
+        {
+          userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+          username: "s7unned",
+          winAmount: -10000,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 19107462.06,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: -100000,
+        },
+      ],
+    },
+    "ed69431f-4252-4315-9322-8ce33fa0220d": {
+      id: "ed69431f-4252-4315-9322-8ce33fa0220d",
+      topic: "/vt/ League 2 - Day 2; Game 1",
+      winOption: "0",
+      timestamp: 1646543688100,
+      poolTotal: 17491444,
+      options: [
+        { optionid: 0, option: "/nepolabo/ - NePoLaBo" },
+        { optionid: 1, option: "/774/ - 774inc" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: -1000000,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: -20000,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: 62338.479999999996,
+        },
+        {
+          userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+          username: "[1 Free Financial Advice]",
+          winAmount: 231128.26,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: 11556413.01,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: 72338.48,
+        },
+        {
+          userid: "654a7283-aabc-4fc8-b6f9-074c7d238f2e",
+          username: "Ollieposter",
+          winAmount: -15000,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: 130209.26,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -505000,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: -5000,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: -5887.169999999998,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: 4722565.21,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: -100000,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: -5000,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: -444444,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: 24112.83,
+        },
+        {
+          userid: "f9a8f570-d563-417f-9ac6-9618f25d566c",
+          username: "TheDuke",
+          winAmount: 48225.65,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: -11000000,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: -100000,
+        },
+      ],
+    },
+    "0dd606d7-4e5d-460d-9d6e-6918843aa811": {
+      id: "0dd606d7-4e5d-460d-9d6e-6918843aa811",
+      topic: "/vt/ League 2 - Day 2; Game 7",
+      winOption: "0",
+      timestamp: 1646543683354,
+      poolTotal: 39753333,
+      options: [
+        { optionid: 0, option: "/clg/ - Cyberlive" },
+        { optionid: 1, option: "/pyon/ - pyon" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: -1000000,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: 44247.380000000005,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: -5000,
+        },
+        {
+          userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+          username: "[造] Triangle Consulting",
+          winAmount: -4000000,
+        },
+        {
+          userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+          username: "Brungus",
+          winAmount: -10000,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: 58748.13,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: -40000,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: 5874812.86,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: -15000,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -1111111,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: -2000000,
+        },
+        {
+          userid: "5c9cbdc9-6f1a-4996-8607-3b9ff915e8ef",
+          username: "🎪 𝐘𝐨𝐧𝐣𝐮 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐬 𝐊.𝐊.",
+          winAmount: -5000000,
+        },
+        {
+          userid: "64c0dd4a-eb3a-427d-bf86-64133efb3434",
+          username: "Kitaguni Ltd.",
+          winAmount: -1000000,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: -5000,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: -15000,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: 3819887.72,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: 127496.26,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: -5000,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: -5000,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: 2449925.14,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: 387481.29000000004,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -100000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: -600000,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: -1000000,
+        },
+        {
+          userid: "a06e2102-d834-46d2-b9fd-956f74efb8fd",
+          username: "IWantAmeToPegMe",
+          winAmount: -1000000,
+        },
+        {
+          userid: "b4281492-d0a8-46bf-aebd-bda749666218",
+          username: " twappi...",
+          winAmount: 50998.5,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: -4000000,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: -5000,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: -2222222,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: -5000,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: -5000,
+        },
+        {
+          userid: "e57801e4-8894-43e3-8353-5bbcf52955c2",
+          username: "Irregular",
+          winAmount: 509985.03,
+        },
+        {
+          userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+          username: "s7unned",
+          winAmount: 25499.25,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 25499251.44,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: -100000,
+        },
+      ],
+    },
+    "4eaf3e6b-8967-41d5-8b44-e56494443956": {
+      id: "4af3e6b-8967-41d5-8b44e-e56494443956",
+      topic: "/vt/ League 2 - Day 2; Game 9",
+      winOption: "0",
+      timestamp: 1646543677879,
+      poolTotal: 129923810,
+      options: [
+        { optionid: 0, option: "/pcg/ - Phase Connect General" },
+        { optionid: 1, option: "/hag/ - Hags" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: 1724453.96,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: 8111.3499999999985,
+        },
+        {
+          userid: "1b5a60c0-5761-4f3c-9b61-f88e59f115cc",
+          username: "sakura matowa fan 2001",
+          winAmount: -1000000,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: -5000,
+        },
+        {
+          userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+          username: "[造] Triangle Consulting",
+          winAmount: 18489079.130000003,
+        },
+        {
+          userid: "28131e00-54cc-4759-a3ca-34c90d6b8f9f",
+          username: "Lolicon Rights Fund",
+          winAmount: 34489079.13,
+        },
+        {
+          userid: "2af916f7-2a18-4c24-8b2b-6f850c6a4a96",
+          username: "Aqua_Share_Holder",
+          winAmount: 305228.35,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: -5000,
+        },
+        {
+          userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+          username: "Brungus",
+          winAmount: -5000,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: -15000,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: -50000,
+        },
+        {
+          userid: "363b61c6-0297-47d1-b2c3-8c35631cbfda",
+          username: "Kaczynski Logistics Co.",
+          winAmount: 34489.08,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: -3000000,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: -15000,
+        },
+        {
+          userid: "3f01a558-87a8-4bcf-baef-84d87324b0e3",
+          username: "Pudding Management Firm",
+          winAmount: -1275546.04,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: -120000,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -1111111,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: -2000000,
+        },
+        {
+          userid: "5c9cbdc9-6f1a-4996-8607-3b9ff915e8ef",
+          username: "🎪 𝐘𝐨𝐧𝐣𝐮 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐬 𝐊.𝐊.",
+          winAmount: -5000000,
+        },
+        {
+          userid: "64c0dd4a-eb3a-427d-bf86-64133efb3434",
+          username: "Kitaguni Ltd.",
+          winAmount: -1000000,
+        },
+        {
+          userid: "654a7283-aabc-4fc8-b6f9-074c7d238f2e",
+          username: "Ollieposter",
+          winAmount: -15000,
+        },
+        {
+          userid: "66d2c24e-2d8e-4049-b72c-3be52b150410",
+          username: "chammerlove",
+          winAmount: 1379563.17,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: -71000,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -5005000,
+        },
+        {
+          userid: "75553152-ee5d-474d-b17f-58c9680379e9",
+          username: "Galoitram",
+          winAmount: -1000000,
+        },
+        {
+          userid: "84f5ebde-9629-49f4-b44f-448aa3dc812c",
+          username: "pinkcatmaybegood",
+          winAmount: -16969,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: -5000000,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: 1624453.96,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: -335730,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -100000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: 294890.79,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: -2000000,
+        },
+        {
+          userid: "9e984819-6109-4feb-82b3-00c485ce48b2",
+          username: "BotansHusband",
+          winAmount: -5000,
+        },
+        {
+          userid: "a06e2102-d834-46d2-b9fd-956f74efb8fd",
+          username: "IWantAmeToPegMe",
+          winAmount: -1000000,
+        },
+        {
+          userid: "a68abd17-8311-4bd3-a4c5-a0998c920dc9",
+          username: "TowaBaby",
+          winAmount: 8622.27,
+        },
+        {
+          userid: "b4281492-d0a8-46bf-aebd-bda749666218",
+          username: " twappi...",
+          winAmount: 1724453.96,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: -3000000,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: 3622.2700000000004,
+        },
+        {
+          userid: "d508582d-c860-4617-b7e1-f9f48043a2b0",
+          username: "Egocide",
+          winAmount: -15000,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: 34489079.13,
+        },
+        {
+          userid: "dc1f47aa-ee9c-4e5a-a41e-6c10bdba35ad",
+          username: "jup",
+          winAmount: -20000,
+        },
+        {
+          userid: "df9e44f6-0a09-4675-bfd6-68a5ef8ae0a5",
+          username: "Polyjester",
+          winAmount: 172445.4,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: -5000,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: 12244.54,
+        },
+        {
+          userid: "e57801e4-8894-43e3-8353-5bbcf52955c2",
+          username: "Irregular",
+          winAmount: -250000,
+        },
+        {
+          userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+          username: "s7unned",
+          winAmount: -7000,
+        },
+        {
+          userid: "f9a8f570-d563-417f-9ac6-9618f25d566c",
+          username: "TheDuke",
+          winAmount: -100000,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 13244539.57,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: -100000,
+        },
+      ],
+    },
+    "e83acac1-e289-432b-be15-05db36ab6772": {
+      id: "e83acac1-e289-432b-be15-05db36ab6772",
+      topic: "/vt/ League 2 - Day 2; Game 5",
+      winOption: "0",
+      timestamp: 1646543673360,
+      poolTotal: 61312776,
+      options: [
+        { optionid: 0, option: "/towa/ - Twap" },
+        { optionid: 1, option: "/lig/ - Large Indies Global" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: -1000000,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: -8201.48,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: 401977.78,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: -5000,
+        },
+        {
+          userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+          username: "Brungus",
+          winAmount: 6699.63,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: 33498.15,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: -80000,
+        },
+        {
+          userid: "340d2c3b-29b6-48a0-9c85-fe3e740dbd60",
+          username: "ELFSNINENINE",
+          winAmount: -10000,
+        },
+        {
+          userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+          username: "[1 Free Financial Advice]",
+          winAmount: 669962.97,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: 2849814.85,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: -120000,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -4444444,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: 2679851.88,
+        },
+        {
+          userid: "64c0dd4a-eb3a-427d-bf86-64133efb3434",
+          username: "Kitaguni Ltd.",
+          winAmount: 1339925.94,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: 13399.26,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: 30197.78,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -760000,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: -500000,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: 10197.779999999999,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: -5000,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: 1239925.94,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: -750000,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -100000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: 883283.07,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: -3000000,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: -3000000,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: -5000,
+        },
+        {
+          userid: "db341495-f3b8-4c7c-b059-f469632f9934",
+          username: "menherafoxgood",
+          winAmount: -45000,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: 26798518.79,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: 6699.63,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: -10000,
+        },
+        {
+          userid: "e57801e4-8894-43e3-8353-5bbcf52955c2",
+          username: "Irregular",
+          winAmount: 1339925.94,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 12399259.4,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: 8932838.7,
+        },
+      ],
+    },
+    "06ae16b8-8572-4229-ad7c-31a2f46eacfe": {
+      id: "06ae16b8-8572-4229-ad7c-31a2f46eacfe",
+      topic: "/vt/ League 2 - Day 2; Game 3",
+      winOption: "1",
+      timestamp: 1646543646050,
+      poolTotal: 53248888,
+      options: [
+        { optionid: 0, option: "/morig/ -" },
+        { optionid: 1, option: "/moon/ - Moona Hoshinova" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: 2741255.5,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: 17412.55,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: -5000,
+        },
+        {
+          userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+          username: "[造] Triangle Consulting",
+          winAmount: -4444444,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: -5000,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: -5000,
+        },
+        {
+          userid: "33873087-99d5-4d7d-970d-e2ce81164855",
+          username: "Multi-Level Marketing",
+          winAmount: -35000,
+        },
+        {
+          userid: "350a8587-f53a-4b7a-9205-fdb2f6f18165",
+          username: "[1 Free Financial Advice]",
+          winAmount: 137062.77,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: -3000000,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: 26118.83,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: 254125.55,
+        },
+        {
+          userid: "51ff088b-f6cd-44fb-82d9-e0b728fa1ad6",
+          username: "Elite Sakura Investments",
+          winAmount: -150000,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -444444,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: 5482510.99,
+        },
+        {
+          userid: "654a7283-aabc-4fc8-b6f9-074c7d238f2e",
+          username: "Ollieposter",
+          winAmount: -10000,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: -5000,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: 44825.11,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -3629372.25,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: -5000,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: 44825.11,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: -5000,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: 2641255.5,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: -250000,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -100000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: 1918878.85,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: 2741255.5,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: 8223766.49,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: -5000,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: -20000000,
+        },
+        {
+          userid: "df9e44f6-0a09-4675-bfd6-68a5ef8ae0a5",
+          username: "Polyjester",
+          winAmount: -50000,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: -5000,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: -5000,
+        },
+        {
+          userid: "e826a836-fe9e-44c4-b869-3880ffd61558",
+          username: "wabi",
+          winAmount: -10000,
+        },
+        {
+          userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+          username: "s7unned",
+          winAmount: 17412.55,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 27412554.95,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: -100000,
+        },
+      ],
+    },
+    "01daa9ac-81d2-41f1-8053-f5e8d7991c96": {
+      id: "01daa9ac-81d2-41f1-8053-f5e8d7991c96",
+      topic: "/vt/ League 2 - Day 2; Game 8",
+      winOption: "0",
+      timestamp: 1646543635006,
+      poolTotal: 108026968,
+      options: [
+        { optionid: 0, option: "/vsj+/ - Vshojo+ General" },
+        { optionid: 1, option: "/nasfaqg/ - NASFAQ" },
+        { optionid: 2, option: "Draw" },
+      ],
+      archive: true,
+      userBets: [
+        {
+          userid: "0ee886b0-ed63-4b94-9d47-14f6d24ac2cb",
+          username: "Patrick Bateman",
+          winAmount: 9049782.07,
+        },
+        {
+          userid: "10be6ad4-b543-4491-b583-735eda2fdbee",
+          username: "towasamarich",
+          winAmount: 704978.21,
+        },
+        {
+          userid: "1b5a60c0-5761-4f3c-9b61-f88e59f115cc",
+          username: "sakura matowa fan 2001",
+          winAmount: 9049782.07,
+        },
+        {
+          userid: "1d21f49a-7256-432a-bf73-305326921ca0",
+          username: "Usakumo",
+          winAmount: -200000,
+        },
+        {
+          userid: "2064544e-b371-46db-b9ee-d0cf9c9338d3",
+          username: "[造] Triangle Consulting",
+          winAmount: -4444444,
+        },
+        {
+          userid: "2cbee595-c587-4d8c-a8d3-37352a23be69",
+          username: "Acedia",
+          winAmount: -20000,
+        },
+        {
+          userid: "2dd3d137-6a0a-43c6-8f4d-7932fb74aeb7",
+          username: "Brungus",
+          winAmount: 45248.91,
+        },
+        {
+          userid: "328d6f2c-e3c3-4f01-a733-4df914da266f",
+          username: "Retard",
+          winAmount: -750000,
+        },
+        {
+          userid: "340d2c3b-29b6-48a0-9c85-fe3e740dbd60",
+          username: "ELFSNINENINE",
+          winAmount: 90497.82,
+        },
+        {
+          userid: "363b61c6-0297-47d1-b2c3-8c35631cbfda",
+          username: "Kaczynski Logistics Co.",
+          winAmount: -40000,
+        },
+        {
+          userid: "38287682-5884-483f-9c56-29f57be5bb9a",
+          username: "Hoshi no KanaTowa's Festival of Chocolatier Robots",
+          winAmount: -3000000,
+        },
+        {
+          userid: "3cfd1ad5-8375-408a-9afb-1f6ec0ef5ad0",
+          username: "Ț̸̿h̴̕͜e̴̞̚ ̷̨͋V̶͕̚ơ̶̯i̶̚͜d̶̖̉",
+          winAmount: -15000,
+        },
+        {
+          userid: "3f01a558-87a8-4bcf-baef-84d87324b0e3",
+          username: "Pudding Management Firm",
+          winAmount: 1524891.0300000003,
+        },
+        {
+          userid: "51712aad-0a34-4b10-a13c-1ea91dced49f",
+          username: "Brat",
+          winAmount: 2012445.52,
+        },
+        {
+          userid: "55b4cbff-bbe8-4061-9ff2-194f53868401",
+          username: "The Tampa Bay Buccaneers",
+          winAmount: -1211111,
+        },
+        {
+          userid: "570f3001-d94d-4f6f-80c4-4128c5257058",
+          username: "M",
+          winAmount: -2000000,
+        },
+        {
+          userid: "5c9cbdc9-6f1a-4996-8607-3b9ff915e8ef",
+          username: "🎪 𝐘𝐨𝐧𝐣𝐮 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐬 𝐊.𝐊.",
+          winAmount: 45248910.34,
+        },
+        {
+          userid: "64c0dd4a-eb3a-427d-bf86-64133efb3434",
+          username: "Kitaguni Ltd.",
+          winAmount: -1000000,
+        },
+        {
+          userid: "677dbbbb-3053-496e-a2a5-7adf14d61bd9",
+          username: "Danger : Zone",
+          winAmount: -1000000,
+        },
+        {
+          userid: "708be5de-6f82-4353-8d4c-892c1626512e",
+          username: "IKZ",
+          winAmount: 75497.82,
+        },
+        {
+          userid: "726b5a5e-9dc0-438e-b6be-fb901a51f482",
+          username: "Bombshell Blondes Banking",
+          winAmount: -1961932.07,
+        },
+        {
+          userid: "84f5ebde-9629-49f4-b44f-448aa3dc812c",
+          username: "pinkcatmaybegood",
+          winAmount: 90497.82,
+        },
+        {
+          userid: "8b16c5d9-1d06-467c-9c85-eea8d4bf7f68",
+          username: "Takoside",
+          winAmount: 452489.1,
+        },
+        {
+          userid: "8c69fdf8-5e83-45ab-a748-8beda120285a",
+          username: "Ars Vie",
+          winAmount: 160995.64,
+        },
+        {
+          userid: "8db6aa35-cf90-4994-abba-c479ee4bc2f9",
+          username: "Mikpon",
+          winAmount: 45248.91,
+        },
+        {
+          userid: "990400b5-f0e2-4b91-8aa6-5a74dc16bcc5",
+          username: "💕HeartAttack💓 Financials",
+          winAmount: -575108.9699999997,
+        },
+        {
+          userid: "99989cb2-c363-4d3a-8c65-467e547ef691",
+          username: "Wooper Wednesday",
+          winAmount: 2214934.62,
+        },
+        {
+          userid: "9ae2d372-c5b0-404e-8bad-c9d9b59508d3",
+          username: "6letters",
+          winAmount: -50000,
+        },
+        {
+          userid: "9c7e9000-e535-454c-855e-176509d89e3e",
+          username: "Asdae",
+          winAmount: -8500000,
+        },
+        {
+          userid: "9de90f9b-ce13-42d1-96f5-235f417f6e34",
+          username: "[造] ChronoBanks",
+          winAmount: -950217.9299999997,
+        },
+        {
+          userid: "a06e2102-d834-46d2-b9fd-956f74efb8fd",
+          username: "IWantAmeToPegMe",
+          winAmount: -1000000,
+        },
+        {
+          userid: "b4281492-d0a8-46bf-aebd-bda749666218",
+          username: " twappi...",
+          winAmount: -40000,
+        },
+        {
+          userid: "b62d41ca-da98-41eb-875c-dd84f8216431",
+          username: "暗闇の中でダンサー",
+          winAmount: -1000000,
+        },
+        {
+          userid: "c8240517-5b93-4ca7-9737-e8881eecfc04",
+          username: "Oyakodon Capital",
+          winAmount: 40248.91,
+        },
+        {
+          userid: "dbadcde2-13b0-4498-a8d7-fec9431f9259",
+          username: "BIG PLANS",
+          winAmount: -20000000,
+        },
+        {
+          userid: "dc1f47aa-ee9c-4e5a-a41e-6c10bdba35ad",
+          username: "jup",
+          winAmount: 402489.1,
+        },
+        {
+          userid: "dfdcbe32-a09a-46ec-9de6-f76fc3d86e0a",
+          username: "Mr. Wizard",
+          winAmount: -100000,
+        },
+        {
+          userid: "e2f158e4-b22e-4562-9236-a11aab56c20e",
+          username: "TFRBATTLERISGAY",
+          winAmount: -5000,
+        },
+        {
+          userid: "e355214c-0e6f-4519-bddc-8058ad148344",
+          username: "HlggDivegrass",
+          winAmount: 40248.91,
+        },
+        {
+          userid: "e57801e4-8894-43e3-8353-5bbcf52955c2",
+          username: "Irregular",
+          winAmount: -4000000,
+        },
+        {
+          userid: "ecea22a5-4e56-4481-aebf-c0a89a59bfd3",
+          username: "s7unned",
+          winAmount: 90497.82,
+        },
+        {
+          userid: "f7c3b57a-8b4f-4715-9f37-dfcc81fb0c18",
+          username: "Kitsune Holdings 🌽🦊🍔",
+          winAmount: -20000000,
+        },
+        {
+          userid: "fe9ab1db-49b5-455c-8e5f-0a3c556a01a1",
+          username: " MSN-02 Zeong Yo",
+          winAmount: 16099564.14,
+        },
+        {
+          userid: "ff0a6eb5-779a-49cb-9f5f-4642a3bfc903",
+          username: "Imyourtarget",
+          winAmount: 804978.21,
+        },
+      ],
+    },
+  },
   "Day 3": {
     "d42de008-0fca-4e04-aa05-08e0bc2c0a48": {
       id: "d42de008-0fca-4e04-aa05-08e0bc2c0a48",
