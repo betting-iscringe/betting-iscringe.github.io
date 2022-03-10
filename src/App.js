@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
-import { FilterFilled } from "@ant-design/icons";
+import { FilterFilled, SyncOutlined } from "@ant-design/icons";
 import {
   Table,
   Typography,
@@ -58,11 +58,20 @@ export default function App() {
   const [eventVisible, setEventVisible] = useState({});
   const [dataHolder, setDataHolder] = useState({});
   const [eventHolder, setEventHolder] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getData(event);
   }, [event]);
 
+  const refreshData = async () => {
+    try {
+      setLoading(true);
+      await getData(event);
+      message.success("Refresh successful", 0.5);
+    } catch {}
+    setLoading(false);
+  };
   const getData = async (path) => {
     try {
       const { data } = await axios.get(
@@ -74,6 +83,7 @@ export default function App() {
       setEventVisible(usedEvents.reduce((a, v) => ({ ...a, [v]: true }), {}));
     } catch (err) {
       message.error(event + " retrieval failed", 1);
+      throw err;
     }
   };
 
@@ -180,7 +190,15 @@ export default function App() {
         }}
       >
         <Title level={3} style={{ minWidth: 300 }}>
-          Nasfaq {event} bet leaderboard
+          Nasfaq {event} bet leaderboard{" "}
+          <SyncOutlined
+            spin={loading}
+            onClick={refreshData}
+            style={{
+              marginLeft: 20,
+              fontSize: 19,
+            }}
+          />
         </Title>
         <div
           style={{
