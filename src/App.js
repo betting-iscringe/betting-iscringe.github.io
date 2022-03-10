@@ -86,7 +86,8 @@ export default function App() {
     const users = {};
     usedEvents.forEach((eventName) => {
       if (!eventVisible[eventName]) return;
-      const bettingPools = usedData[eventName];
+      const bettingPools = usedData?.[eventName];
+      if (!bettingPools) return;
       const pools = Object.values(bettingPools);
 
       // Loop through all the pools and record each user's winnings
@@ -166,7 +167,7 @@ export default function App() {
       .sort((a, b) => b.profit - a.profit);
   }, [usernameFilter, eventVisible, event, dataHolder, eventHolder]);
 
-  const options = ["HFZ", "divegrass", "etc"];
+  const options = ["hfz", "divegrass", "etc"];
 
   return (
     <div className="App" style={{ padding: 20 }}>
