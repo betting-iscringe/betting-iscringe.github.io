@@ -1,10 +1,18 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { FilterFilled } from "@ant-design/icons";
-import { Table, Typography, Dropdown, Input, Tooltip, Select } from "antd";
+import {
+  Table,
+  Typography,
+  Dropdown,
+  Input,
+  Tooltip,
+  Select,
+  message,
+} from "antd";
+import axios from "axios";
 import "./styles.css";
 
 import Fights from "./Fights";
-import { data, shitData, divegrassData } from "./data";
 
 const { Option } = Select;
 const { Title } = Typography;
@@ -42,23 +50,36 @@ const columns = [
   },
 ];
 
-const dataObject = {
-  HFZ: { events: Object.keys(data), data },
-  divegrass: { events: Object.keys(divegrassData), data: divegrassData },
-  etc: { events: Object.keys(shitData), data: shitData },
-};
-
 const defaultEvent = "divegrass";
 export default function App() {
   const [event, setEvent] = useState(defaultEvent);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [usernameFilter, setUsernameFilter] = useState("");
-  const [eventVisible, setEventVisible] = useState(
-    dataObject[defaultEvent].events.reduce((a, v) => ({ ...a, [v]: true }), {})
-  );
+  const [eventVisible, setEventVisible] = useState({});
+  const [dataHolder, setDataHolder] = useState({});
+  const [eventHolder, setEventHolder] = useState([]);
+
+  useEffect(() => {
+    getData(event);
+  }, [event]);
+
+  const getData = async (path) => {
+    try {
+      const { data } = await axios.get(
+        `https://betting-iscringe.github.io/data/${path}.json`
+      );
+      const usedEvents = Object.keys(data);
+      setDataHolder(data);
+      setEventHolder(usedEvents);
+      setEventVisible(usedEvents.reduce((a, v) => ({ ...a, [v]: true }), {}));
+    } catch (err) {
+      message.error(event + " retrieval failed", 1);
+    }
+  };
 
   const items = useMemo(() => {
-    const { data: usedData, events: usedEvents } = dataObject[event];
+    const usedData = dataHolder;
+    const usedEvents = eventHolder;
     // Remove non alphanum
     const userFilter = usernameFilter.replace(/[^0-9a-z]/gi, "").toLowerCase();
     const userDirtyFilter = usernameFilter.toLowerCase();
@@ -143,13 +164,7 @@ export default function App() {
         profit: user.profit + (user.winnings - user.betAmount),
       }))
       .sort((a, b) => b.profit - a.profit);
-  }, [usernameFilter, eventVisible, event]);
-
-  const handleEvent = (event) => {
-    const { events: usedEvents } = dataObject[event];
-    setEventVisible(usedEvents.reduce((a, v) => ({ ...a, [v]: true }), {}));
-    setEvent(event);
-  };
+  }, [usernameFilter, eventVisible, event, dataHolder, eventHolder]);
 
   const options = ["HFZ", "divegrass", "etc"];
 
@@ -183,7 +198,7 @@ export default function App() {
               marginTop: "0.5em",
               marginRight: "1.1vw",
             }}
-            onChange={handleEvent}
+            onChange={setEvent}
           >
             {options.map((option, i) => (
               <Option key={i} value={option}>
@@ -203,7 +218,7 @@ export default function App() {
                 <Fights
                   eventVisible={eventVisible}
                   setEventVisible={setEventVisible}
-                  events={dataObject[event].events}
+                  events={eventHolder || []}
                 />
               }
               trigger={["click"]}
