@@ -67,12 +67,12 @@ export default function App() {
   const refreshData = async () => {
     try {
       setLoading(true);
-      await getData(event);
+      await getData(event, false);
       message.success("Refresh successful", 0.5);
     } catch {}
     setLoading(false);
   };
-  const getData = async (path) => {
+  const getData = async (path, resetVisible = true) => {
     try {
       const { data } = await axios.get(
         `https://betting-iscringe.github.io/data/${path}.json`
@@ -80,7 +80,8 @@ export default function App() {
       const usedEvents = Object.keys(data);
       setDataHolder(data);
       setEventHolder(usedEvents);
-      setEventVisible(usedEvents.reduce((a, v) => ({ ...a, [v]: true }), {}));
+      if (resetVisible)
+        setEventVisible(usedEvents.reduce((a, v) => ({ ...a, [v]: true }), {}));
     } catch (err) {
       message.error(event + " retrieval failed", 1);
       throw err;
