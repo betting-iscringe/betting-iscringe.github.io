@@ -75,7 +75,14 @@ export default function App() {
   const getData = async (path, resetVisible = true) => {
     try {
       const { data } = await axios.get(
-        `https://betting-iscringe.github.io/data/${path}.json`
+        `https://betting-iscringe.github.io/data/${path}.json`,
+        {
+          headers: {
+            "Cache-Control": "no-cache",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        }
       );
       const usedEvents = Object.keys(data);
       setDataHolder(data);
