@@ -156,7 +156,7 @@ export default function App() {
 
             // Use ratio of bet amount to total winning bet amount
             // apply ratio to pool
-            if (option === winOption) {
+            if (option == winOption) {
               user.winnings += (amount / winning) * totalPool;
             }
             users[userid] = user;
