@@ -82,6 +82,7 @@ export default function App() {
             Pragma: "no-cache",
             Expires: "0",
           },
+          params: { timestamp: Date.now() },
         }
       );
       const usedEvents = Object.keys(data);
