@@ -141,9 +141,9 @@ export default function App() {
         );
 
         // Loop all bets and record total bet amount and winnings
-        const options = Object.values(userBets);
-        options.forEach((option) => {
-          option.forEach(({ userid, username, betAmount: amount, option }) => {
+        const options = Object.entries(userBets);
+        options.forEach(([option, optionBets]) => {
+          optionBets.forEach(({ userid, username, betAmount: amount }) => {
             const user = users?.[userid] || {
               userid,
               username,
