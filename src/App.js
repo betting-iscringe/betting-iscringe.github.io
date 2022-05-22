@@ -50,9 +50,9 @@ const columns = [
   },
 ];
 
-const defaultEvent = "hfz";
+const defaultEvent = "divegrass";
 export default function App() {
-  const [event, setEvent] = useState(defaultEvent);
+  const [event, setEvent] = useState([defaultEvent]);
   const [treeVisible, setTreeVisible] = useState(false);
   const [usernameFilter, setUsernameFilter] = useState("");
   const [checkedKeys, setCheckedKeys] = useState([]);
@@ -74,48 +74,54 @@ export default function App() {
     } catch {}
     setLoading(false);
   };
-  const getData = async (path, resetVisible = true) => {
-    try {
-      const { data } = await axios.get(
-        `https://betting-iscringe.github.io/data/${path}.json`,
-        {
-          headers: {
-            "Cache-Control": "no-cache",
-            Pragma: "no-cache",
-            Expires: "0",
-          },
-          params: { timestamp: new Date().getTime() },
-        }
-      );
-      const usedEvents = Object.keys(data);
-      setDataHolder(data);
-      setEventHolder(usedEvents);
-      let keysHolder = [];
-      let dataHolder = Object.entries(data).map(
-        ([bettingEvent, poolObject]) => {
-          let keyEvent = "EVENT_" + bettingEvent;
-          keysHolder.push(keyEvent);
-          return {
-            title: bettingEvent,
-            key: keyEvent,
-            children: Object.entries(poolObject).map(([poolId, poolData]) => {
-              keysHolder.push(poolId);
-              return {
-                title: poolData.topic,
-                key: poolId,
-              };
-            }),
-          };
-        }
-      );
-      setTreeData(dataHolder);
-      if (resetVisible) {
-        setCheckedKeys(keysHolder);
-        setExpandedKeys(keysHolder);
+  const getData = async (events, resetVisible = true) => {
+    let usedEvents = [];
+    let keysHolder = [];
+    let dataHolder = [];
+    let totalData = {};
+    for (let path of events) {
+      try {
+        const { data } = await axios.get(
+          `https://betting-iscringe.github.io/data/${path}.json`,
+          {
+            headers: {
+              "Cache-Control": "no-cache",
+              Pragma: "no-cache",
+              Expires: "0",
+            },
+            params: { timestamp: new Date().getTime() },
+          }
+        );
+        totalData = { ...totalData, ...data };
+        usedEvents.push(...Object.keys(data));
+        dataHolder.push(
+          ...Object.entries(data).map(([bettingEvent, poolObject]) => {
+            let keyEvent = "EVENT_" + bettingEvent;
+            keysHolder.push(keyEvent);
+            return {
+              title: bettingEvent,
+              key: keyEvent,
+              children: Object.entries(poolObject).map(([poolId, poolData]) => {
+                keysHolder.push(poolId);
+                return {
+                  title: poolData.topic,
+                  key: poolId,
+                };
+              }),
+            };
+          })
+        );
+      } catch (err) {
+        message.error(path + " retrieval failed", 1);
+        throw err;
       }
-    } catch (err) {
-      message.error(event + " retrieval failed", 1);
-      throw err;
+    }
+    setDataHolder(totalData);
+    setEventHolder(usedEvents);
+    setTreeData(dataHolder);
+    if (resetVisible) {
+      setCheckedKeys(keysHolder);
+      setExpandedKeys(keysHolder.filter((key) => key.startsWith("EVENT_")));
     }
   };
 
@@ -221,7 +227,7 @@ export default function App() {
         }}
       >
         <Title level={3} style={{ minWidth: 300 }}>
-          Nasfaq {event} bet leaderboard{" "}
+          Nasfaq {event.join(", ")} bet leaderboard{" "}
           <SyncOutlined
             spin={loading}
             onClick={refreshData}
@@ -233,7 +239,7 @@ export default function App() {
         </Title>
         <div
           style={{
-            width: "25vw",
+            width: "35vw",
             minWidth: 300,
             padding: 4,
             display: "flex",
@@ -241,9 +247,11 @@ export default function App() {
           }}
         >
           <Select
-            defaultValue={defaultEvent}
+            mode="multiple"
+            allowClear
+            defaultValue={[defaultEvent]}
             style={{
-              width: "8vw",
+              width: "18vw",
               minWidth: 150,
               marginTop: "0.5em",
               marginRight: "1.1vw",
