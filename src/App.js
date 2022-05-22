@@ -12,7 +12,7 @@ import {
 import axios from "axios";
 import "./styles.css";
 
-import Fights from "./Fights";
+import Tree from "./Tree";
 
 const { Option } = Select;
 const { Title } = Typography;
@@ -53,12 +53,14 @@ const columns = [
 const defaultEvent = "hfz";
 export default function App() {
   const [event, setEvent] = useState(defaultEvent);
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [treeVisible, setTreeVisible] = useState(false);
   const [usernameFilter, setUsernameFilter] = useState("");
-  const [eventVisible, setEventVisible] = useState({});
+  const [checkedKeys, setCheckedKeys] = useState([]);
   const [dataHolder, setDataHolder] = useState({});
   const [eventHolder, setEventHolder] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [treeData, setTreeData] = useState([]);
+  const [expandedKeys, setExpandedKeys] = useState([]);
 
   useEffect(() => {
     getData(event);
@@ -88,8 +90,29 @@ export default function App() {
       const usedEvents = Object.keys(data);
       setDataHolder(data);
       setEventHolder(usedEvents);
-      if (resetVisible)
-        setEventVisible(usedEvents.reduce((a, v) => ({ ...a, [v]: true }), {}));
+      let keysHolder = [];
+      let dataHolder = Object.entries(data).map(
+        ([bettingEvent, poolObject]) => {
+          let keyEvent = "EVENT_" + bettingEvent;
+          keysHolder.push(keyEvent);
+          return {
+            title: bettingEvent,
+            key: keyEvent,
+            children: Object.entries(poolObject).map(([poolId, poolData]) => {
+              keysHolder.push(poolId);
+              return {
+                title: poolData.topic,
+                key: poolId,
+              };
+            }),
+          };
+        }
+      );
+      setTreeData(dataHolder);
+      if (resetVisible) {
+        setCheckedKeys(keysHolder);
+        setExpandedKeys(keysHolder);
+      }
     } catch (err) {
       message.error(event + " retrieval failed", 1);
       throw err;
@@ -104,7 +127,6 @@ export default function App() {
     const userDirtyFilter = usernameFilter.toLowerCase();
     const users = {};
     usedEvents.forEach((eventName) => {
-      if (!eventVisible[eventName]) return;
       const bettingPools = usedData?.[eventName];
       if (!bettingPools) return;
       const pools = Object.values(bettingPools);
@@ -112,8 +134,8 @@ export default function App() {
       // Loop through all the pools and record each user's winnings
       pools.forEach((value) => {
         // Calculate total bet amount for winning choice
-        const { userBets, winOption, totalPool, archive = false } = value;
-        if (winOption === null) return;
+        const { id, userBets, winOption, totalPool, archive = false } = value;
+        if (!checkedKeys.includes(id) || winOption === null) return;
 
         // special shit for archive data
         if (archive) {
@@ -184,7 +206,7 @@ export default function App() {
         profit: user.profit + (user.winnings - user.betAmount),
       }))
       .sort((a, b) => b.profit - a.profit);
-  }, [usernameFilter, eventVisible, event, dataHolder, eventHolder]);
+  }, [usernameFilter, event, dataHolder, eventHolder, checkedKeys]);
 
   const options = ["hfz", "divegrass", "etc"];
 
@@ -243,15 +265,18 @@ export default function App() {
           <Tooltip title="Filter streams">
             <Dropdown
               overlay={
-                <Fights
-                  eventVisible={eventVisible}
-                  setEventVisible={setEventVisible}
-                  events={eventHolder || []}
+                <Tree
+                  data={dataHolder}
+                  checkedKeys={checkedKeys}
+                  setCheckedKeys={setCheckedKeys}
+                  treeData={treeData}
+                  expandedKeys={expandedKeys}
+                  setExpandedKeys={setExpandedKeys}
                 />
               }
               trigger={["click"]}
-              visible={dropdownVisible}
-              onVisibleChange={setDropdownVisible}
+              visible={treeVisible}
+              onVisibleChange={setTreeVisible}
             >
               <FilterFilled
                 style={{
