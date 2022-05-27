@@ -125,6 +125,12 @@ export default function App() {
     }
   };
 
+  const onRightClick = (e) => {
+    e.preventDefault();
+    setCheckedKeys([]);
+    setExpandedKeys([]);
+  }
+
   const items = useMemo(() => {
     const usedData = dataHolder;
     const usedEvents = eventHolder;
@@ -285,6 +291,7 @@ export default function App() {
               trigger={["click"]}
               visible={treeVisible}
               onVisibleChange={setTreeVisible}
+              onContextMenu={onRightClick}
             >
               <FilterFilled
                 style={{
