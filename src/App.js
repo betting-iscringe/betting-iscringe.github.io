@@ -122,6 +122,9 @@ export default function App() {
     if (resetVisible) {
       setCheckedKeys(keysHolder);
       setExpandedKeys(keysHolder.filter((key) => key.startsWith("EVENT_")));
+    } else {
+      setCheckedKeys(checkedKeys)
+      setExpandedKeys(expandedKeys)
     }
   };
 
