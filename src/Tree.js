@@ -1,17 +1,14 @@
-import { useEffect } from "react";
 import { Tree } from "antd";
 
 export default (props) => {
   const {
     checkedKeys,
     setCheckedKeys,
-    data,
     treeData,
     expandedKeys,
     setExpandedKeys,
   } = props;
 
-  useEffect(() => {}, [data]);
   const onCheck = (checkedKeysValue) => {
     setCheckedKeys(checkedKeysValue);
   };

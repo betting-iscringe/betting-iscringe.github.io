@@ -280,7 +280,6 @@ export default function App() {
             <Dropdown
               overlay={
                 <Tree
-                  data={dataHolder}
                   checkedKeys={checkedKeys}
                   setCheckedKeys={setCheckedKeys}
                   treeData={treeData}
