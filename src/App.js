@@ -120,7 +120,7 @@ export default function App() {
     setEventHolder(usedEvents);
     setTreeData(dataHolder);
     if (resetVisible) {
-      setCheckedKeys(keysHolder);
+      setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
       setExpandedKeys(keysHolder.filter((key) => key.startsWith("EVENT_")));
     } else {
       setCheckedKeys(checkedKeys)

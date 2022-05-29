@@ -10,10 +10,10 @@ export default (props) => {
   } = props;
 
   const onCheck = (checkedKeysValue) => {
-    setCheckedKeys(checkedKeysValue);
+    setCheckedKeys(checkedKeysValue.filter((key) => !key.startsWith("EVENT_")));
   };
   const onExpand = (expandedKeysValue) => {
-    setExpandedKeys(expandedKeysValue);
+    setExpandedKeys(expandedKeysValue.filter((key) => key.startsWith("EVENT_")));
   };
 
   return (
