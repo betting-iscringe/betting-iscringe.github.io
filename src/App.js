@@ -279,7 +279,7 @@ export default function App() {
             onChange={(e) => setUsernameFilter(e.target.value)}
             style={{ width: "20vw", minWidth: 200 }}
           />
-          <Tooltip title="Filter streams">
+          <Tooltip title="Filter streams (right click unselects all)">
             <Dropdown
               overlay={
                 <Tree
