@@ -175,9 +175,6 @@ export default function App() {
               profit: 0,
             };
             user.username = username;
-
-            // Use ratio of bet amount to total winning bet amount
-            // apply ratio to pool
             user.profit += winAmount;
             users[userid] = user;
           });
