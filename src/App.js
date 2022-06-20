@@ -130,8 +130,20 @@ export default function App() {
 
   const onRightClick = (e) => {
     e.preventDefault();
-    setCheckedKeys([]);
-    setExpandedKeys([]);
+    if (checkedKeys.length === 0) {
+      let keysHolder = treeData
+        .map(({ key: parentKey, children }) => {
+          let childrenKeys = children.map(({ key }) => key);
+          childrenKeys.push(parentKey);
+          return childrenKeys;
+        })
+        .flat();
+      setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
+      setExpandedKeys(keysHolder.filter((key) => key.startsWith("EVENT_")));
+    } else {
+      setCheckedKeys([]);
+      setExpandedKeys([]);
+    }
   }
 
   const items = useMemo(() => {
