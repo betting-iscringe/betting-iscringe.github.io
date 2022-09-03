@@ -50,7 +50,7 @@ const columns = [
   },
 ];
 
-const defaultEvent = "hfz";
+const defaultEvent = "divegrass";
 export default function App() {
   const [event, setEvent] = useState([defaultEvent]);
   const [treeVisible, setTreeVisible] = useState(false);
