@@ -50,7 +50,18 @@ const columns = [
   },
 ];
 
+const headerAndParams = {
+  headers: {
+    "Cache-Control": "no-cache",
+    Pragma: "no-cache",
+    Expires: "0",
+  },
+  params: { timestamp: new Date().getTime() },
+};
+
+const defaultPath = `https://betting-iscringe.github.io`;
 const defaultEvent = "divegrass";
+
 export default function App() {
   const [event, setEvent] = useState([defaultEvent]);
   const [treeVisible, setTreeVisible] = useState(false);
@@ -74,6 +85,7 @@ export default function App() {
     } catch {}
     setLoading(false);
   };
+
   const getData = async (events, resetVisible = true) => {
     let usedEvents = [];
     let keysHolder = [];
@@ -82,20 +94,28 @@ export default function App() {
     for (let path of events) {
       try {
         const { data } = await axios.get(
-          `https://betting-iscringe.github.io/data/${path}.json`,
-          {
-            headers: {
-              "Cache-Control": "no-cache",
-              Pragma: "no-cache",
-              Expires: "0",
-            },
-            params: { timestamp: new Date().getTime() },
-          }
+          `${defaultPath}/data/${path}`,
+          headerAndParams
         );
-        totalData = { ...totalData, ...data };
-        usedEvents.push(...Object.keys(data));
+
+        const eventDataArray = await Promise.all(
+          data.names.map(async (eventName) => {
+            const { data: eventSingleData } = await axios.get(
+              `${defaultPath}/data/${path}/${eventName}.json`,
+              headerAndParams
+            );
+            return eventSingleData;
+          })
+        );
+        const eventData = {};
+        eventDataArray.forEach(
+          (datum, i) => (eventData[data.names[i]] = datum)
+        );
+
+        usedEvents.push(...data.names);
+        totalData = { ...totalData, ...eventData };
         dataHolder.push(
-          ...Object.entries(data).map(([bettingEvent, poolObject]) => {
+          ...Object.entries(eventData).map(([bettingEvent, poolObject]) => {
             let keyEvent = "EVENT_" + bettingEvent;
             keysHolder.push(keyEvent);
             return {
@@ -122,8 +142,8 @@ export default function App() {
     if (resetVisible) {
       setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
     } else {
-      setCheckedKeys(checkedKeys)
-      setExpandedKeys(expandedKeys)
+      setCheckedKeys(checkedKeys);
+      setExpandedKeys(expandedKeys);
     }
   };
 
@@ -138,12 +158,11 @@ export default function App() {
         })
         .flat();
       setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
-      setExpandedKeys(keysHolder.filter((key) => key.startsWith("EVENT_")));
     } else {
       setCheckedKeys([]);
       setExpandedKeys([]);
     }
-  }
+  };
 
   const items = useMemo(() => {
     const usedData = dataHolder;
@@ -266,7 +285,7 @@ export default function App() {
           <Select
             mode="multiple"
             allowClear
-            defaultValue={[defaultEvent]}
+            defaultValue={defaultEvent}
             style={{
               width: "18vw",
               minWidth: 150,
