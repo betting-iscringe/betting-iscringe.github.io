@@ -60,7 +60,7 @@ const headerAndParams = {
 };
 
 const defaultPath = `https://betting-iscringe.github.io`;
-const defaultEvent = "divegrass";
+const defaultEvent = "etc";
 
 export default function App() {
   const [event, setEvent] = useState([defaultEvent]);
