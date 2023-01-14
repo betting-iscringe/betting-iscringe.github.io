@@ -60,7 +60,7 @@ const headerAndParams = {
 };
 
 const defaultPath = `https://betting-iscringe.github.io`;
-const defaultEvent = "etc";
+const defaultEvent = "hfz";
 
 export default function App() {
   const [event, setEvent] = useState([defaultEvent]);
