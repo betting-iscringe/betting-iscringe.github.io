@@ -60,10 +60,9 @@ const headerAndParams = {
 };
 
 const defaultPath = `https://betting-iscringe.github.io`;
-const defaultEvent = "hfz";
 
 export default function App() {
-  const [event, setEvent] = useState([defaultEvent]);
+  const [events, setEvents] = useState([]);
   const [treeVisible, setTreeVisible] = useState(false);
   const [usernameFilter, setUsernameFilter] = useState("");
   const [checkedKeys, setCheckedKeys] = useState([]);
@@ -73,14 +72,19 @@ export default function App() {
   const [treeData, setTreeData] = useState([]);
   const [expandedKeys, setExpandedKeys] = useState([]);
 
+  useEffect(async () => {
+    const { data: { defaults }} = await axios.get(`${defaultPath}/data`)
+    setEvents(defaults)
+  }, [])
+
   useEffect(() => {
-    getData(event);
-  }, [event]);
+    if(events.length > 0) getData(events);
+  }, [events]);
 
   const refreshData = async () => {
     try {
       setLoading(true);
-      await getData(event, false);
+      await getData(events, false);
       message.success("Refresh successful", 0.5);
     } catch {}
     setLoading(false);
@@ -248,7 +252,7 @@ export default function App() {
         profit: user.profit + (user.winnings - user.betAmount),
       }))
       .sort((a, b) => b.profit - a.profit);
-  }, [usernameFilter, event, dataHolder, eventHolder, checkedKeys]);
+  }, [usernameFilter, events, dataHolder, eventHolder, checkedKeys]);
 
   const options = ["hfz", "divegrass", "etc"];
 
@@ -263,7 +267,7 @@ export default function App() {
         }}
       >
         <Title level={3} style={{ minWidth: 300 }}>
-          Nasfaq {event.join(", ")} bet leaderboard{" "}
+          Nasfaq {events.join(", ")} bet leaderboard{" "}
           <SyncOutlined
             spin={loading}
             onClick={refreshData}
@@ -285,14 +289,14 @@ export default function App() {
           <Select
             mode="multiple"
             allowClear
-            defaultValue={defaultEvent}
             style={{
               width: "18vw",
               minWidth: 150,
               marginTop: "0.5em",
               marginRight: "1.1vw",
             }}
-            onChange={setEvent}
+            onChange={setEvents}
+            value={events}
           >
             {options.map((option, i) => (
               <Option key={i} value={option}>
