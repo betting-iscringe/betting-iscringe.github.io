@@ -64,7 +64,7 @@ const defaultEvent = "hfz";
 
 export default function App() {
   const [event, setEvent] = useState([defaultEvent]);
-  const [treeOpen, setTreeOpen] = useState(false);
+  const [treeVisible, setTreeVisible] = useState(false);
   const [usernameFilter, setUsernameFilter] = useState("");
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [dataHolder, setDataHolder] = useState({});
@@ -86,7 +86,7 @@ export default function App() {
     setLoading(false);
   };
 
-  const getData = async (events, resetOpen = true) => {
+  const getData = async (events, resetVisible = true) => {
     let usedEvents = [];
     let keysHolder = [];
     let dataHolder = [];
@@ -139,7 +139,7 @@ export default function App() {
     setDataHolder(totalData);
     setEventHolder(usedEvents);
     setTreeData(dataHolder);
-    if (resetOpen) {
+    if (resetVisible) {
       setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
     } else {
       setCheckedKeys(checkedKeys);
@@ -318,8 +318,8 @@ export default function App() {
                 />
               }
               trigger={["click"]}
-              open={treeOpen}
-              onOpenChange={setTreeOpen}
+              visible={treeVisible}
+              onVisibleChange={setTreeVisible}
               onContextMenu={onRightClick}
             >
               <FilterFilled
