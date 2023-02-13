@@ -16,7 +16,6 @@ const columns = [
     key: "betAmount",
     sorter: (a, b) => a.betAmount - b.betAmount,
     render: commaMaker,
-    width: 400,
   },
   {
     title: "Gross winnings",
@@ -130,5 +129,5 @@ export default (props) => {
       .sort((a, b) => b.profit - a.profit);
   }, [usernameFilter, events, dataHolder, eventHolder, checkedKeys]);
 
-  return <Table columns={columns} loading={loading} dataSource={items} />;
+  return <Table columns={columns} loading={loading} dataSource={items} scroll={{ x:true }}/>;
 };
