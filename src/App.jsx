@@ -33,6 +33,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
+    document.title = `Nasfaq ${events.join(", ")} betting board`
     if (events.length > 0) getData(events);
   }, [events]);
 
