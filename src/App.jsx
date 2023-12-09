@@ -27,13 +27,18 @@ export default function App() {
   const [treeData, setTreeData] = useState([]);
   const [expandedKeys, setExpandedKeys] = useState([]);
 
-  useEffect(async () => {
-    const { data: { defaults }} = await axios.get(`${defaultPath}/data`)
-    setEvents(defaults)
-  }, [])
+  useEffect(() => {
+    const getInitialData = async () => {
+      const {
+        data: { defaults },
+      } = await axios.get(`${defaultPath}/data`);
+      setEvents(defaults);
+    };
+    getInitialData();
+  }, []);
 
   useEffect(() => {
-    document.title = `Nasfaq ${events.join(", ")} betting board`
+    document.title = `Nasfaq ${events.join(", ")} betting board`;
     if (events.length > 0) getData(events);
   }, [events]);
 
@@ -85,6 +90,7 @@ export default function App() {
                 return {
                   title: poolData.topic,
                   key: poolId,
+                  isLeaf: true,
                 };
               }),
             };

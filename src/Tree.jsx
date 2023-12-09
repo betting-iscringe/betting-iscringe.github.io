@@ -1,4 +1,5 @@
 import { Tree } from "antd";
+const { DirectoryTree } = Tree;
 
 export default (props) => {
   const {
@@ -13,12 +14,14 @@ export default (props) => {
     setCheckedKeys(checkedKeysValue.filter((key) => !key.startsWith("EVENT_")));
   };
   const onExpand = (expandedKeysValue) => {
-    setExpandedKeys(expandedKeysValue.filter((key) => key.startsWith("EVENT_")));
+    setExpandedKeys(
+      expandedKeysValue.filter((key) => key.startsWith("EVENT_"))
+    );
   };
 
   return (
     <div className="ant-menu" style={{ maxHeight: "90vh", overflow: "auto" }}>
-      <Tree
+      <DirectoryTree
         checkable
         autoExpandParent
         onExpand={onExpand}
@@ -30,6 +33,7 @@ export default (props) => {
           margin: 8,
           fontSize: 16,
         }}
+        expandAction="click"
       />
     </div>
   );

@@ -47,6 +47,8 @@ export default (props) => {
         width: "100%",
         justifyContent: "space-between",
         flexWrap: "wrap",
+        alignContent: "center",
+        alignItems: "center",
       }}
     >
       <Title level={3} style={{ minWidth: 300 }}>
@@ -62,7 +64,7 @@ export default (props) => {
       </Title>
       <div
         style={{
-          width: "35vw",
+          width: "40vw",
           minWidth: 300,
           padding: 4,
           display: "flex",
@@ -75,14 +77,14 @@ export default (props) => {
           style={{
             width: "18vw",
             minWidth: 150,
-            marginTop: "0.5em",
             marginRight: "1.1vw",
+            display: "grid",
           }}
           onChange={setEvents}
           value={events}
         >
           {options.map((option, i) => (
-            <Option key={i} value={option}>
+            <Option key={option} value={option}>
               {option}
             </Option>
           ))}
@@ -93,7 +95,10 @@ export default (props) => {
           onChange={(e) => setUsernameFilter(e.target.value)}
           style={{ width: "20vw", minWidth: 200 }}
         />
-        <Tooltip title="Filter streams (right click unselects all)">
+        <Tooltip
+          title="Filter streams (right click unselects all)"
+          placement="bottomRight"
+        >
           <Dropdown
             overlay={
               <Tree
@@ -105,14 +110,13 @@ export default (props) => {
               />
             }
             trigger={["click"]}
-            visible={treeVisible}
-            onVisibleChange={setTreeVisible}
+            open={treeVisible}
+            onOpenChange={setTreeVisible}
             onContextMenu={onRightClick}
           >
             <FilterFilled
               style={{
                 fontSize: 19,
-                paddingTop: "0.5em",
                 marginLeft: "1.1vw",
               }}
               onClick={(e) => e.preventDefault()}

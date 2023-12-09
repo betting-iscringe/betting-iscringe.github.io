@@ -65,6 +65,7 @@ export default (props) => {
         if (archive) {
           userBets.forEach(({ userid, username, winAmount }) => {
             const user = users?.[userid] || {
+              key: userid,
               userid,
               username,
               betAmount: 0,
@@ -88,6 +89,7 @@ export default (props) => {
         options.forEach(([option, optionBets]) => {
           optionBets.forEach(({ userid, username, betAmount: amount }) => {
             const user = users?.[userid] || {
+              key: userid,
               userid,
               username,
               betAmount: 0,
