@@ -16,6 +16,12 @@ const headerAndParams = {
 };
 
 const defaultPath = `https://betting-iscringe.github.io`;
+const dataSource = axios.create({
+  baseURL: defaultPath,
+  transitional: {
+    silentJSONParsing: false,
+  },
+});
 
 export default function App() {
   const [events, setEvents] = useState([]);
@@ -31,7 +37,7 @@ export default function App() {
     const getInitialData = async () => {
       const {
         data: { defaults },
-      } = await axios.get(`${defaultPath}/data`);
+      } = await dataSource.get(`/data`);
       setEvents(defaults);
     };
     getInitialData();
@@ -57,15 +63,12 @@ export default function App() {
     let totalData = {};
     for (let path of events) {
       try {
-        const { data } = await axios.get(
-          `${defaultPath}/data/${path}`,
-          headerAndParams
-        );
+        const { data } = await dataSource.get(`/data/${path}`, headerAndParams);
 
         const eventDataArray = await Promise.all(
           data.names.map(async (eventName) => {
-            const { data: eventSingleData } = await axios.get(
-              `${defaultPath}/data/${path}/${eventName}.json`,
+            const { data: eventSingleData } = await dataSource.get(
+              `/data/${path}/${eventName}.json`,
               headerAndParams
             );
             return eventSingleData;
