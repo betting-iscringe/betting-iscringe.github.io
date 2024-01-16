@@ -1,30 +1,13 @@
 import { useState, useEffect } from "react";
 import { message } from "antd";
-import axios from "axios";
 import "./styles.css";
+import { dataSource } from "../utils";
 
 import BetsTable from "./BetsTable";
 import Topbar from "./Topbar";
 
-const headerAndParams = {
-  headers: {
-    "Cache-Control": "no-cache",
-    Pragma: "no-cache",
-    Expires: "0",
-  },
-  params: { timestamp: new Date().getTime() },
-};
-
-const defaultPath = `https://betting-iscringe.github.io`;
-const dataSource = axios.create({
-  baseURL: defaultPath,
-  transitional: {
-    silentJSONParsing: false,
-  },
-});
-
 export default function App() {
-  const [events, setEvents] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [usernameFilter, setUsernameFilter] = useState("");
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [dataHolder, setDataHolder] = useState({});
@@ -35,75 +18,28 @@ export default function App() {
 
   useEffect(() => {
     const getInitialData = async () => {
-      const {
-        data: { defaults },
-      } = await dataSource.get(`/data`);
-      setEvents(defaults);
+      const defaults = await dataSource.getDefault();
+      setCategories(defaults);
     };
     getInitialData();
   }, []);
 
   useEffect(() => {
-    document.title = `Nasfaq ${events.join(", ")} betting board`;
-    if (events.length > 0) getData(events);
-  }, [events]);
+    document.title = `Nasfaq ${categories.join(", ")} betting board`;
+    if (categories.length > 0) getData(categories);
+  }, [categories]);
 
   const refreshData = async () => {
     try {
-      await getData(events, false);
+      await getData(categories, false);
       message.success("Refresh successful", 0.5);
     } catch {}
   };
 
-  const getData = async (events, resetVisible = true) => {
+  const getData = async (categories, resetVisible = true) => {
     setLoading(true);
-    let usedEvents = [];
-    let keysHolder = [];
-    let treeDataHolder = [];
-    let totalData = {};
-    for (let path of events) {
-      try {
-        const { data } = await dataSource.get(`/data/${path}`, headerAndParams);
-
-        const eventDataArray = await Promise.all(
-          data.names.map(async (eventName) => {
-            const { data: eventSingleData } = await dataSource.get(
-              `/data/${path}/${eventName}.json`,
-              headerAndParams
-            );
-            return eventSingleData;
-          })
-        );
-        const eventData = {};
-        eventDataArray.forEach(
-          (datum, i) => (eventData[data.names[i]] = datum)
-        );
-
-        usedEvents.push(...data.names);
-        totalData = { ...totalData, ...eventData };
-        treeDataHolder.push(
-          ...Object.entries(eventData).map(([bettingEvent, poolObject]) => {
-            let keyEvent = "EVENT_" + bettingEvent;
-            keysHolder.push(keyEvent);
-            return {
-              title: bettingEvent,
-              key: keyEvent,
-              children: Object.entries(poolObject).map(([poolId, poolData]) => {
-                keysHolder.push(poolId);
-                return {
-                  title: poolData.topic,
-                  key: poolId,
-                  isLeaf: true,
-                };
-              }),
-            };
-          })
-        );
-      } catch (err) {
-        message.error(path + " retrieval failed", 1);
-        throw err;
-      }
-    }
+    const { totalData, usedEvents, treeDataHolder, keysHolder } =
+      await dataSource.getAllEvents(categories);
     setDataHolder(totalData);
     setEventHolder(usedEvents);
     setTreeData(treeDataHolder);
@@ -119,8 +55,8 @@ export default function App() {
   return (
     <div className="App" style={{ padding: 20 }}>
       <Topbar
-        events={events}
-        setEvents={setEvents}
+        events={categories}
+        setEvents={setCategories}
         setUsernameFilter={setUsernameFilter}
         checkedKeys={checkedKeys}
         setCheckedKeys={setCheckedKeys}
@@ -132,7 +68,7 @@ export default function App() {
       />
       <BetsTable
         usernameFilter={usernameFilter}
-        events={events}
+        events={categories}
         dataHolder={dataHolder}
         eventHolder={eventHolder}
         checkedKeys={checkedKeys}
