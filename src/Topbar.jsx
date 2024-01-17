@@ -70,11 +70,14 @@ export default (props) => {
       </Title>
       <div
         style={{
+          marginLeft: "auto",
           width: "40vw",
           minWidth: 300,
           padding: 4,
           display: "flex",
           justifyContent: "flex-end",
+          flexWrap: "wrap",
+          flexGrow: 1,
         }}
       >
         <Select
@@ -83,7 +86,7 @@ export default (props) => {
           style={{
             width: "18vw",
             minWidth: 150,
-            marginRight: "1.1vw",
+            marginRight: 23,
             display: "grid",
           }}
           onChange={setEvents}

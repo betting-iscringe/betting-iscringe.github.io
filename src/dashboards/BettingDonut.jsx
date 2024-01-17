@@ -64,8 +64,8 @@ const BettingDonut = (props) => {
     <ResponsiveContainer
       width="100%"
       height="100%"
-      minWidth={400}
-      minHeight={400}
+      minWidth={300}
+      minHeight={300}
     >
       <PieChart>
         <Pie

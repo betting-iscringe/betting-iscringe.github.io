@@ -24,7 +24,7 @@ export default function Container(props) {
         backgroundColor: "#16161a",
         borderRadius: 8,
         padding: 12,
-        minWidth: 400,
+        minWidth: 300,
         ...additionalStyles,
       }}
     >
