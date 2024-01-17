@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import {} from "recharts";
 import {
   AreaChart,
   Area,
@@ -9,7 +8,6 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { dataSource } from "../../utils";
 
 const gradientOffset = (data) => {
   const dataMax = Math.max(...data.map((i) => i.y));
@@ -32,12 +30,12 @@ const COLORS = {
 const Dot = (props) => (
   <circle className="recharts-dot recharts-area-dot" {...props} />
 );
-export default function SimpleAreaChart() {
+export default function ProfitGraph(props) {
+  const { totalUserBets } = props;
   const [offset, setOffset] = useState(0);
   const [profitTimeline, setProfitTimeline] = useState([]);
 
   const populateData = async () => {
-    const totalUserBets = await dataSource.getUserBets();
     let initial = 0;
     const profitTimeline = totalUserBets.map((bet, i) => {
       const { totalPool, winOption, winning, userBets } = bet;
@@ -48,7 +46,7 @@ export default function SimpleAreaChart() {
         }
         initial -= betAmount;
       });
-      return { x: i, y: initial };
+      return { x: bet.closingTime + i, y: initial };
     });
     setOffset(gradientOffset(profitTimeline));
     setProfitTimeline(profitTimeline);
@@ -56,7 +54,7 @@ export default function SimpleAreaChart() {
 
   useEffect(() => {
     populateData();
-  }, []);
+  }, [totalUserBets]);
 
   const generateDots = ({ value, ...rest }) => {
     const [, y] = value;
@@ -66,14 +64,22 @@ export default function SimpleAreaChart() {
     return <Dot {...rest} fill={COLORS.RED} stroke={COLORS.RED} />;
   };
 
+  const formatUnix = (timestamp) => {
+    const a = new Date(timestamp);
+    const year = a.getFullYear();
+    const month = a.getMonth();
+    const date = a.getDate();
+    return `${date}/${month}/${year}`;
+  };
+
   return (
     <AreaChart
-      width={600}
-      height={400}
+      width={800}
+      height={600}
       data={profitTimeline}
-      margin={{ top: 10, right: 30, left: 0, bottom: 10 }}
+      margin={{ top: 10, right: 20, left: 50, bottom: 10 }}
     >
-      <XAxis dataKey="x" />
+      <XAxis dataKey="x" tickFormatter={formatUnix} />
       <YAxis />
       <defs>
         <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
@@ -97,8 +103,8 @@ export default function SimpleAreaChart() {
         </linearGradient>
       </defs>
       <Area
-        dot={generateDots}
-        type="monotone"
+        dot={profitTimeline.length > 120 ? false : generateDots}
+        type="basis"
         dataKey="y"
         stroke="url(#splitColorLine)"
         fill="url(#splitColor)"

@@ -1,3 +1,4 @@
 import dataSource, { headerAndParams } from "./datasource";
+import mapping from "./mapping";
 
-export { dataSource, headerAndParams };
+export { dataSource, headerAndParams, mapping };

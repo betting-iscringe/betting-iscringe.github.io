@@ -2,6 +2,7 @@
   "name": "betting-iscringe",
   "version": "1.0.0",
   "description": "React example starter project",
+  "license": "MIT",
   "keywords": [
     "react",
     "starter"
@@ -18,9 +19,11 @@
   "devDependencies": {
     "@babel/runtime": "7.13.8",
     "@vitejs/plugin-react": "^4.2.1",
+    "local-cors-proxy": "^1.1.0",
     "vite": "^5.0.7"
   },
   "scripts": {
+    "proxy": "lcp --proxyUrl https://betting-iscringe.github.io/ --port 8010",
     "predeploy": "yarn build",
     "start": "vite",
     "build": "vite build && touch dist/.nojekyll"

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { message } from "antd";
 import "./styles.css";
-import { dataSource } from "../utils";
+import { dataSource, mapping } from "../utils";
 
 import BetsTable from "./BetsTable";
 import Topbar from "./Topbar";
+import Dashboard from "./dashboards/Dashboard";
 
 export default function App() {
   const [categories, setCategories] = useState([]);
@@ -15,19 +16,41 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [treeData, setTreeData] = useState([]);
   const [expandedKeys, setExpandedKeys] = useState([]);
+  const [showDash, setShowDash] = useState(false);
+  const [totalUserBets, setTotalUserBets] = useState([]);
 
   useEffect(() => {
-    const getInitialData = async () => {
-      const defaults = await dataSource.getDefault();
-      setCategories(defaults);
-    };
     getInitialData();
   }, []);
+
+  useEffect(() => {
+    setUsernameFilter("");
+  }, [showDash]);
 
   useEffect(() => {
     document.title = `Nasfaq ${categories.join(", ")} betting board`;
     if (categories.length > 0) getData(categories);
   }, [categories]);
+
+  useEffect(() => {
+    initUserBets(dataHolder, usernameFilter);
+  }, [usernameFilter, dataHolder]);
+
+  const getInitialData = async () => {
+    const defaults = await dataSource.getDefault();
+    setCategories(defaults);
+  };
+
+  const initUserBets = async (totalData, usernameFilter) => {
+    setLoading(true);
+    if (usernameFilter) {
+      const userBets = mapping.getUserBets(totalData, usernameFilter);
+      setTotalUserBets(userBets);
+    } else {
+      setTotalUserBets([]);
+    }
+    setLoading(false);
+  };
 
   const refreshData = async () => {
     try {
@@ -63,17 +86,24 @@ export default function App() {
         expandedKeys={expandedKeys}
         setExpandedKeys={setExpandedKeys}
         treeData={treeData}
+        usernameFilter={usernameFilter}
         loading={loading}
         refreshData={refreshData}
+        showDash={showDash}
+        setShowDash={setShowDash}
       />
-      <BetsTable
-        usernameFilter={usernameFilter}
-        events={categories}
-        dataHolder={dataHolder}
-        eventHolder={eventHolder}
-        checkedKeys={checkedKeys}
-        loading={loading}
-      />
+      {showDash ? (
+        <Dashboard totalUserBets={totalUserBets} />
+      ) : (
+        <BetsTable
+          usernameFilter={usernameFilter}
+          events={categories}
+          dataHolder={dataHolder}
+          eventHolder={eventHolder}
+          checkedKeys={checkedKeys}
+          loading={loading}
+        />
+      )}
     </div>
   );
 }

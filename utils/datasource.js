@@ -10,7 +10,7 @@ export const headerAndParams = {
   params: { timestamp: new Date().getTime() },
 };
 
-const defaultPath = "https://betting-iscringe.github.io/";
+const defaultPath = import.meta.env.VITE_API_URL;
 const dataSource = axios.create({
   baseURL: defaultPath,
   transitional: {
@@ -82,59 +82,9 @@ const getAllEvents = async (categories) => {
   return { totalData, usedEvents, treeDataHolder, keysHolder };
 };
 
-const getUserBets = async (userId = "6bfa79b8-60f7-4250-880f-ab8c8d74a8db") => {
-  const { totalData } = await getAllEvents(["hfz", "divegrass", "etc"]);
-  const totalUserBets = [];
-  let allBets = {};
-  Object.values(totalData).forEach((bettingEvent) => {
-    allBets = { ...allBets, ...bettingEvent };
-
-    Object.values(bettingEvent).forEach((bet) => {
-      const {
-        id: betId,
-        topic,
-        closingTime,
-        options,
-        userBets: optionbets,
-        archive,
-        winOption,
-        totalPool,
-      } = bet;
-      if (archive) return;
-      const userBets = [];
-      Object.entries(optionbets).forEach(([option, optionbet]) => {
-        const foundBet = optionbet.find((userbet) => userbet.userid === userId);
-        if (foundBet) {
-          userBets.push(foundBet);
-        }
-      });
-      if (userBets.length !== 0) {
-        let winning = optionbets[winOption].reduce(
-          (acc, { betAmount }) => acc + betAmount,
-          0
-        );
-        totalUserBets.push({
-          betId,
-          topic,
-          closingTime,
-          options,
-          userBets,
-          winOption,
-          totalPool,
-          winning,
-        });
-      }
-    });
-  });
-  if (totalUserBets.length > 1)
-    totalUserBets.sort((a, b) => a.closingTime - b.closingTime);
-  return totalUserBets;
-};
-
 export default {
   getDefault,
   getCategory,
   getEvent,
   getAllEvents,
-  getUserBets,
 };

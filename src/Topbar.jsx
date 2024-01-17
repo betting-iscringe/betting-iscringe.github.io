@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { FilterFilled, SyncOutlined } from "@ant-design/icons";
-import { Typography, Dropdown, Input, Tooltip, Select } from "antd";
+import { Typography, Dropdown, Input, Tooltip, Select, Switch } from "antd";
 
 import Tree from "./Tree";
 
@@ -18,8 +18,11 @@ export default (props) => {
     expandedKeys,
     setExpandedKeys,
     treeData,
-		loading,
-		refreshData,
+    usernameFilter,
+    loading,
+    refreshData,
+    showDash,
+    setShowDash,
   } = props;
   const [treeVisible, setTreeVisible] = useState(false);
 
@@ -53,6 +56,9 @@ export default (props) => {
     >
       <Title level={3} style={{ minWidth: 300 }}>
         Nasfaq {events.join(", ")} bet leaderboard{" "}
+        <Tooltip title="shits experimental yo" placement="bottomRight">
+          <Switch size="small" checked={showDash} onChange={setShowDash} />
+        </Tooltip>
         <SyncOutlined
           spin={loading}
           onClick={refreshData}
@@ -90,8 +96,9 @@ export default (props) => {
           ))}
         </Select>
         <Input
-          placeholder="Filter usernames"
+          placeholder={showDash ? "Search userId" : "Filter username"}
           allowClear
+          value={usernameFilter}
           onChange={(e) => setUsernameFilter(e.target.value)}
           style={{ width: "20vw", minWidth: 200 }}
         />
