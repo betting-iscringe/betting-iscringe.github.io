@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Table } from "antd";
+import { commaMaker } from "../utils";
 
-const commaMaker = (value) => value.toLocaleString("en-US", { maximumFractionDigits: 2 });
 
 const columns = [
   {
