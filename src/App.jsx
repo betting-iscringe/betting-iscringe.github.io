@@ -10,6 +10,7 @@ import Dashboard from "./dashboards/Dashboard";
 export default function App() {
   const [categories, setCategories] = useState([]);
   const [usernameFilter, setUsernameFilter] = useState("");
+  const [userIdFilter, setUserIdFilter] = useState("");
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [dataHolder, setDataHolder] = useState({});
   const [eventHolder, setEventHolder] = useState([]);
@@ -23,22 +24,20 @@ export default function App() {
     getInitialData();
   }, []);
 
-
   useEffect(() => {
     document.title = `Nasfaq ${categories.join(", ")} betting board`;
     if (categories.length > 0) getData(categories);
   }, [categories]);
 
   useEffect(() => {
-    initUserBets(dataHolder, usernameFilter);
-  }, [usernameFilter, dataHolder]);
+    initUserBets(dataHolder, userIdFilter);
+  }, [userIdFilter, dataHolder]);
 
   const handleSwitchClick = (value) => {
-    setUsernameFilter("");
     setShowDash(value);
   };
   const handleRowClick = (value) => {
-    setUsernameFilter(value);
+    setUserIdFilter(value);
     setShowDash(true);
   };
 
@@ -86,13 +85,13 @@ export default function App() {
       <Topbar
         events={categories}
         setEvents={setCategories}
-        setUsernameFilter={setUsernameFilter}
+        setUsernameFilter={showDash ? setUserIdFilter : setUsernameFilter}
+        usernameFilter={showDash ? userIdFilter : usernameFilter}
         checkedKeys={checkedKeys}
         setCheckedKeys={setCheckedKeys}
         expandedKeys={expandedKeys}
         setExpandedKeys={setExpandedKeys}
         treeData={treeData}
-        usernameFilter={usernameFilter}
         loading={loading}
         refreshData={refreshData}
         showDash={showDash}
