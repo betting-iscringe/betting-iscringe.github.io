@@ -41,6 +41,7 @@ export default (props) => {
     eventHolder,
     checkedKeys,
     loading,
+    handleRowClick,
   } = props;
 
   const items = useMemo(() => {
@@ -131,5 +132,17 @@ export default (props) => {
       .sort((a, b) => b.profit - a.profit);
   }, [usernameFilter, events, dataHolder, eventHolder, checkedKeys]);
 
-  return <Table columns={columns} loading={loading} dataSource={items} scroll={{ x:true }}/>;
+  return (
+    <Table
+      columns={columns}
+      loading={loading}
+      dataSource={items}
+      scroll={{ x: true }}
+      onRow={(record) => ({
+        onDoubleClick: () => {
+          handleRowClick(record.userid);
+        },
+      })}
+    />
+  );
 };

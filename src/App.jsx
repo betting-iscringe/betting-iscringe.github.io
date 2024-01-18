@@ -23,9 +23,6 @@ export default function App() {
     getInitialData();
   }, []);
 
-  useEffect(() => {
-    setUsernameFilter("");
-  }, [showDash]);
 
   useEffect(() => {
     document.title = `Nasfaq ${categories.join(", ")} betting board`;
@@ -35,6 +32,15 @@ export default function App() {
   useEffect(() => {
     initUserBets(dataHolder, usernameFilter);
   }, [usernameFilter, dataHolder]);
+
+  const handleSwitchClick = (value) => {
+    setUsernameFilter("");
+    setShowDash(value);
+  };
+  const handleRowClick = (value) => {
+    setUsernameFilter(value);
+    setShowDash(true);
+  };
 
   const getInitialData = async () => {
     const defaults = await dataSource.getDefault();
@@ -90,12 +96,13 @@ export default function App() {
         loading={loading}
         refreshData={refreshData}
         showDash={showDash}
-        setShowDash={setShowDash}
+        handleSwitchClick={handleSwitchClick}
       />
       {showDash ? (
         <Dashboard totalUserBets={totalUserBets} />
       ) : (
         <BetsTable
+          handleRowClick={handleRowClick}
           usernameFilter={usernameFilter}
           events={categories}
           dataHolder={dataHolder}

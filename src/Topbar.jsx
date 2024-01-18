@@ -22,7 +22,7 @@ export default (props) => {
     loading,
     refreshData,
     showDash,
-    setShowDash,
+    handleSwitchClick,
   } = props;
   const [treeVisible, setTreeVisible] = useState(false);
 
@@ -57,7 +57,11 @@ export default (props) => {
       <Title level={3} style={{ minWidth: 300 }}>
         Nasfaq {events.join(", ")} bet leaderboard{" "}
         <Tooltip title="shits experimental yo" placement="bottomRight">
-          <Switch size="small" checked={showDash} onChange={setShowDash} />
+          <Switch
+            size="small"
+            checked={showDash}
+            onChange={handleSwitchClick}
+          />
         </Tooltip>
         <SyncOutlined
           spin={loading}
@@ -105,34 +109,36 @@ export default (props) => {
           onChange={(e) => setUsernameFilter(e.target.value)}
           style={{ width: "20vw", minWidth: 200 }}
         />
-        <Tooltip
-          title="Filter streams (right click unselects all)"
-          placement="bottomRight"
-        >
-          <Dropdown
-            overlay={
-              <Tree
-                checkedKeys={checkedKeys}
-                setCheckedKeys={setCheckedKeys}
-                treeData={treeData}
-                expandedKeys={expandedKeys}
-                setExpandedKeys={setExpandedKeys}
-              />
-            }
-            trigger={["click"]}
-            open={treeVisible}
-            onOpenChange={setTreeVisible}
-            onContextMenu={onRightClick}
+        {!showDash && (
+          <Tooltip
+            title="Filter streams (right click unselects all)"
+            placement="bottomRight"
           >
-            <FilterFilled
-              style={{
-                fontSize: 19,
-                marginLeft: "1.1vw",
-              }}
-              onClick={(e) => e.preventDefault()}
-            />
-          </Dropdown>
-        </Tooltip>
+            <Dropdown
+              overlay={
+                <Tree
+                  checkedKeys={checkedKeys}
+                  setCheckedKeys={setCheckedKeys}
+                  treeData={treeData}
+                  expandedKeys={expandedKeys}
+                  setExpandedKeys={setExpandedKeys}
+                />
+              }
+              trigger={["click"]}
+              open={treeVisible}
+              onOpenChange={setTreeVisible}
+              onContextMenu={onRightClick}
+            >
+              <FilterFilled
+                style={{
+                  fontSize: 19,
+                  marginLeft: "1.1vw",
+                }}
+                onClick={(e) => e.preventDefault()}
+              />
+            </Dropdown>
+          </Tooltip>
+        )}
       </div>
     </div>
   );
