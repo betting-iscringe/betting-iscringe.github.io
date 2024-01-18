@@ -65,41 +65,43 @@ export default function ProfitGraph(props) {
 
   return (
     <ResponsiveContainer width="100%" minHeight={400} height="80%">
-      <AreaChart
-        data={profitTimeline}
-        margin={{ top: 10, right: 20, left: 50, bottom: 10 }}
-      >
-        <XAxis dataKey="x" tickFormatter={formatUnix} />
-        <YAxis tickFormatter={commaMaker} />
-        <defs>
-          <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
-            <stop offset={0} stopColor={COLORS.GREEN} stopOpacity={1} />
-            <stop
-              offset={offset - 0.08}
-              stopColor={COLORS.GREEN}
-              stopOpacity={0.2}
-            />
-            <stop offset={offset} stopColor="black" stopOpacity={0} />
-            <stop
-              offset={offset + 0.08}
-              stopColor={COLORS.RED}
-              stopOpacity={0.2}
-            />
-            <stop offset={1} stopColor={COLORS.RED} stopOpacity={1} />
-          </linearGradient>
-          <linearGradient id="splitColorLine" x1="0" y1="0" x2="0" y2="1">
-            <stop offset={offset} stopColor={COLORS.GREEN} stopOpacity={1} />
-            <stop offset={offset} stopColor={COLORS.RED} stopOpacity={1} />
-          </linearGradient>
-        </defs>
-        <Area
-          dot={profitTimeline.length > 120 ? false : generateDots}
-          type={profitTimeline.length > 120 ? "basis" : "monotone"}
-          dataKey="y"
-          stroke="url(#splitColorLine)"
-          fill="url(#splitColor)"
-        />
-      </AreaChart>
+      {profitTimeline.length > 0 && (
+        <AreaChart
+          data={profitTimeline}
+          margin={{ top: 10, right: 20, left: 50, bottom: 10 }}
+        >
+          <XAxis dataKey="x" tickFormatter={formatUnix} />
+          <YAxis tickFormatter={commaMaker} />
+          <defs>
+            <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
+              <stop offset={0} stopColor={COLORS.GREEN} stopOpacity={1} />
+              <stop
+                offset={offset - 0.08}
+                stopColor={COLORS.GREEN}
+                stopOpacity={0.2}
+              />
+              <stop offset={offset} stopColor="black" stopOpacity={0} />
+              <stop
+                offset={offset + 0.08}
+                stopColor={COLORS.RED}
+                stopOpacity={0.2}
+              />
+              <stop offset={1} stopColor={COLORS.RED} stopOpacity={1} />
+            </linearGradient>
+            <linearGradient id="splitColorLine" x1="0" y1="0" x2="0" y2="1">
+              <stop offset={offset} stopColor={COLORS.GREEN} stopOpacity={1} />
+              <stop offset={offset} stopColor={COLORS.RED} stopOpacity={1} />
+            </linearGradient>
+          </defs>
+          <Area
+            dot={profitTimeline.length > 120 ? false : generateDots}
+            type={profitTimeline.length > 120 ? "basis" : "monotone"}
+            dataKey="y"
+            stroke="url(#splitColorLine)"
+            fill="url(#splitColor)"
+          />
+        </AreaChart>
+      )}
     </ResponsiveContainer>
   );
 }
