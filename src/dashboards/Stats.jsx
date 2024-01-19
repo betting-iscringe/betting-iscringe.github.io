@@ -34,6 +34,7 @@ const Stats = (props) => {
     <div
       style={{
         display: "flex",
+        flexWrap: "wrap",
         minWidth: "100%",
         gap: 8,
         marginBottom: 4,
