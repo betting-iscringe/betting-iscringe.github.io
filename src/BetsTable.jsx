@@ -42,6 +42,7 @@ export default (props) => {
     checkedKeys,
     loading,
     handleRowClick,
+    hide,
   } = props;
 
   const items = useMemo(() => {
@@ -131,9 +132,14 @@ export default (props) => {
       }))
       .sort((a, b) => b.profit - a.profit);
   }, [usernameFilter, events, dataHolder, eventHolder, checkedKeys]);
+  const additionalStyles = {};
+  if (hide) {
+    additionalStyles.display = "none";
+  }
 
   return (
     <Table
+      style={{ ...additionalStyles }}
       columns={columns}
       loading={loading}
       dataSource={items}

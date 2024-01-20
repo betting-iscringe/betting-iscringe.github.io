@@ -97,19 +97,17 @@ export default function App() {
         showDash={showDash}
         handleSwitchClick={handleSwitchClick}
       />
-      {showDash ? (
-        <Dashboard totalUserBets={totalUserBets} />
-      ) : (
-        <BetsTable
-          handleRowClick={handleRowClick}
-          usernameFilter={usernameFilter}
-          events={categories}
-          dataHolder={dataHolder}
-          eventHolder={eventHolder}
-          checkedKeys={checkedKeys}
-          loading={loading}
-        />
-      )}
+      {showDash && <Dashboard totalUserBets={totalUserBets} />}
+      <BetsTable
+        hide={showDash}
+        handleRowClick={handleRowClick}
+        usernameFilter={usernameFilter}
+        events={categories}
+        dataHolder={dataHolder}
+        eventHolder={eventHolder}
+        checkedKeys={checkedKeys}
+        loading={loading}
+      />
     </div>
   );
 }
