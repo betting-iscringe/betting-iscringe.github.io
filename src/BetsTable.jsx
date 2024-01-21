@@ -144,6 +144,7 @@ export default (props) => {
       loading={loading}
       dataSource={items}
       scroll={{ x: true }}
+      rowClassName="selectable"
       onRow={(record) => ({
         onDoubleClick: () => {
           handleRowClick(record.userid);
