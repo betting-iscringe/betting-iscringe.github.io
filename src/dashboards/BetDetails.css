@@ -1,0 +1,41 @@
+.bet-details-container {
+	display: flex;
+	flex-direction: column;
+	border-style: solid;
+	border-color: #252535;
+	border-width: 4px;
+	border-radius: 8px;
+	padding: 8px;
+	max-width: 600px;
+}
+
+.bet-details-options-container {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	overflow: auto;
+	flex-direction: row;
+	gap: 2px;
+}
+
+.bet-details-stat-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.bet-details-option {
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+}
+
+.bet-details-option-loss {
+	border-color: #cf1322;
+}
+
+.bet-details-option-win {
+	border-color: #3f8600;
+}

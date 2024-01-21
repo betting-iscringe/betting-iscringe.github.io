@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Container from "./Container";
+import StatDisplay from "./StatsDisplay";
 
-const StatDisplay = (props) => <Container minWidth="0px" stats {...props} />;
 
 const Stats = (props) => {
   const { totalUserBets } = props;

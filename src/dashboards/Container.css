@@ -1,0 +1,8 @@
+.stats-container {
+	display: flex;
+	flex-direction: column;
+	background-color: #16161a;
+	border-radius: 8px;
+	padding: 12px;
+	min-width: 300px;
+}

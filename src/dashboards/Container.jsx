@@ -1,6 +1,7 @@
 import { Statistic, Typography } from "antd";
 import CountUp from "react-countup";
 import { COLORS } from "../../utils";
+import "./Container.css";
 const { Title } = Typography;
 
 const formatter = (value) => <CountUp end={value} separator="," />;
@@ -42,13 +43,8 @@ export default function Container(props) {
   }
   return (
     <div
+      className="stats-container"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "#16161a",
-        borderRadius: 8,
-        padding: 12,
-        minWidth: 300,
         ...additionalStyles,
       }}
     >
@@ -62,7 +58,7 @@ export default function Container(props) {
           title={props.title}
           value={props.value}
           precision={2}
-          formatter={formatter}
+          formatter={typeof props.value === "number" && formatter}
           prefix={prefix}
           valueStyle={{ ...addtionalStatValueStyle }}
         />

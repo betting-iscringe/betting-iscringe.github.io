@@ -1,0 +1,46 @@
+.topbar-container {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center
+}
+
+.topbar-title {
+	min-width: 300px;
+}
+
+.topbar-sync {
+	margin-left: 20px;
+	font-size: 19px;
+}
+
+.topbar-control-container {
+	margin-left: auto;
+	width: 40vw;
+	min-width: 300px;
+	padding: 4px;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	flex-grow: 1;
+
+}
+
+.topbar-control-events {
+	width: 18vw;
+	min-width: 150px;
+	margin-right: 23px;
+	display: grid;
+}
+
+.topbar-control-filter {
+	width: 20vw;
+	min-width: 200px;
+}
+
+.topbar-control-filter-icon {
+	font-size: 19px;
+	margin-left: 1.1vw;
+}

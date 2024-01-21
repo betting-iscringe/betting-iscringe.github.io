@@ -3,6 +3,7 @@ import { FilterFilled, SyncOutlined } from "@ant-design/icons";
 import { Typography, Dropdown, Input, Tooltip, Select, Switch } from "antd";
 
 import Tree from "./Tree";
+import "./Topbar.css";
 
 const { Option } = Select;
 const { Title } = Typography;
@@ -44,17 +45,8 @@ export default (props) => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        width: "100%",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
-        alignContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Title level={3} style={{ minWidth: 300 }}>
+    <div className="topbar-container">
+      <Title level={3} className="topbar-title">
         Nasfaq {events.join(", ")} bet leaderboard{" "}
         <Tooltip title="shits experimental yo" placement="bottomRight">
           <Switch
@@ -66,33 +58,14 @@ export default (props) => {
         <SyncOutlined
           spin={loading}
           onClick={refreshData}
-          style={{
-            marginLeft: 20,
-            fontSize: 19,
-          }}
+          className="topbar-sync"
         />
       </Title>
-      <div
-        style={{
-          marginLeft: "auto",
-          width: "40vw",
-          minWidth: 300,
-          padding: 4,
-          display: "flex",
-          justifyContent: "flex-end",
-          flexWrap: "wrap",
-          flexGrow: 1,
-        }}
-      >
+      <div className="topbar-control-container">
         <Select
           mode="multiple"
           allowClear
-          style={{
-            width: "18vw",
-            minWidth: 150,
-            marginRight: 23,
-            display: "grid",
-          }}
+          className="topbar-control-events"
           onChange={setEvents}
           value={events}
         >
@@ -107,7 +80,7 @@ export default (props) => {
           allowClear
           value={usernameFilter}
           onChange={(e) => setUsernameFilter(e.target.value)}
-          style={{ width: "20vw", minWidth: 200 }}
+          className="topbar-control-filter"
         />
         {!showDash && (
           <Tooltip
@@ -130,10 +103,7 @@ export default (props) => {
               onContextMenu={onRightClick}
             >
               <FilterFilled
-                style={{
-                  fontSize: 19,
-                  marginLeft: "1.1vw",
-                }}
+                className="topbar-control-filter-icon"
                 onClick={(e) => e.preventDefault()}
               />
             </Dropdown>

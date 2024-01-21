@@ -1,7 +1,4 @@
-const getUserBets = (
-  totalData,
-  userId = "726b5a5e-9dc0-438e-b6be-fb901a51f482"
-) => {
+const getUserBets = (totalData, userId) => {
   const totalUserBets = [];
   let allBets = {};
   Object.values(totalData).forEach((bettingEvent) => {
@@ -31,11 +28,16 @@ const getUserBets = (
           (acc, { betAmount }) => acc + betAmount,
           0
         );
+        const optionsObject = {};
+        options.forEach((option) => {
+          optionsObject[option.optionid] = option.option;
+        });
         totalUserBets.push({
           betId,
           topic,
           closingTime,
           options,
+          optionsObject,
           userBets,
           winOption,
           totalPool,

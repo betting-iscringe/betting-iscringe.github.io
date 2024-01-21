@@ -1,5 +1,4 @@
 import App from "./App";
-import Dashboard from "./dashboards/Dashboard";
 import { createRoot } from "react-dom/client";
 
 const container = document.getElementById("root");
