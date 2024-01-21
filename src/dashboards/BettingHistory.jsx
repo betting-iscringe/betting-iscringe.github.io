@@ -7,11 +7,11 @@ const BettingHistory = (props) => {
       style={{
         overflow: "auto",
         display: "flex",
-        flexDirection: "column-reverse",
+        flexDirection: "column",
         gap: 4,
       }}
     >
-      {totalUserBets.map((bet) => (
+      {totalUserBets.toReversed().map((bet) => (
         <BetDetails bet={bet} />
       ))}
     </div>
