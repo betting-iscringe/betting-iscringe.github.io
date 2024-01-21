@@ -48,7 +48,7 @@ export default (props) => {
     <div className="topbar-container">
       <Title level={3} className="topbar-title">
         Nasfaq {events.join(", ")} bet leaderboard{" "}
-        <Tooltip title="shits experimental yo" placement="bottomRight">
+        <Tooltip title="try double clicking a user" placement="bottomRight">
           <Switch
             size="small"
             checked={showDash}
