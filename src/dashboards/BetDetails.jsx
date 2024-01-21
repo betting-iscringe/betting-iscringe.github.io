@@ -1,5 +1,6 @@
 import { Tooltip } from "antd";
 import StatDisplay from "./StatsDisplay";
+import { commaMaker } from "../../utils";
 import "./BetDetails.css";
 
 const BetDetails = (props) => {
@@ -39,7 +40,7 @@ const BetDetails = (props) => {
         {userBets.map((userBet) => {
           const { option, betAmount } = userBet;
           return (
-            <Tooltip title={"$" + betAmount}>
+            <Tooltip title={"$" + commaMaker(betAmount)}>
               <div
                 key={betId + userBet.option}
                 className={`bet-details-option ${
