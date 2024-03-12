@@ -1,4 +1,3 @@
-import BettingDonut from "./BettingDonut";
 import BettingHistory from "./BettingHistory";
 import Container from "./Container";
 import ProfitGraph from "./ProfitGraph";
@@ -16,6 +15,8 @@ export default function Dashboard(props) {
         width: "100%",
         flexWrap: "wrap",
         boxSizing: "border-box",
+        maxHeight: "calc(96vh - 44px)",
+        minHeight: 0,
       }}
     >
       <Stats totalUserBets={totalUserBets} />
@@ -30,10 +31,7 @@ export default function Dashboard(props) {
           flexShrink: 1,
         }}
       >
-        <Container title="Bet Summary">
-          <BettingDonut totalUserBets={totalUserBets} />
-        </Container>
-        <Container title="Bet History" maxHeight={600}>
+        <Container title="Bet History" maxHeight={760}>
           <BettingHistory totalUserBets={totalUserBets} />
         </Container>
       </div>

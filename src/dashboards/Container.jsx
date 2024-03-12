@@ -1,10 +1,24 @@
-import { Statistic, Typography } from "antd";
+import { Progress, Statistic, Tooltip, Typography } from "antd";
 import CountUp from "react-countup";
 import { COLORS } from "../../utils";
 import "./Container.css";
 const { Title } = Typography;
 
 const formatter = (value) => <CountUp end={value} separator="," />;
+const bar = ({ win, lose }) => {
+  const percent = Math.round((win / (win + lose)) * 100);
+  return (
+    <Tooltip title={`Won: ${win}  Lost: ${lose}`}>
+      <Progress
+        percent={percent}
+        style={{ width: 300 }}
+        strokeColor={COLORS.DARK_GREEN}
+        trailColor={COLORS.DARK_RED}
+        strokeWidth={16}
+      />
+    </Tooltip>
+  );
+};
 
 export default function Container(props) {
   const additionalStyles = {};
@@ -17,6 +31,7 @@ export default function Container(props) {
     stats = false,
     prefix = "",
     changeColor = false,
+    isBar,
   } = props;
   if (minWidth) {
     additionalStyles.minWidth = minWidth;
@@ -53,6 +68,16 @@ export default function Container(props) {
           <Title level={4}>{props.title}</Title>
           {props.children}
         </>
+      ) : isBar ? (
+        <Statistic
+          className="bar-stats"
+          title={props.title}
+          value={props.value}
+          precision={2}
+          formatter={typeof props.value === "object" && bar}
+          prefix={prefix}
+          valueStyle={{ ...addtionalStatValueStyle }}
+        />
       ) : (
         <Statistic
           title={props.title}

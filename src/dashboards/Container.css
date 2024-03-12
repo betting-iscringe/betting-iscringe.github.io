@@ -6,3 +6,8 @@
 	padding: 12px;
 	min-width: 300px;
 }
+.bar-stats .ant-statistic-content-value {
+	display: flex;
+	align-items: center;
+	padding-top: 8px;
+}

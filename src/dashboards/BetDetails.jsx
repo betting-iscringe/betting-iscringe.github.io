@@ -37,23 +37,17 @@ const BetDetails = (props) => {
       </span>
 
       <span className="bet-details-options-container">
-        {userBets.map((userBet) => {
-          const { option, betAmount } = userBet;
-          return (
-            <Tooltip title={"$" + commaMaker(betAmount)}>
-              <div
-                key={betId + userBet.option}
-                className={`bet-details-option ${
-                  option === winOption
-                    ? "bet-details-option-win"
-                    : "bet-details-option-loss"
-                }`}
-              >
-                {optionsObject[option]}
-              </div>
-            </Tooltip>
-          );
-        })}
+        {userBets.map(({ option, betAmount }) => (
+          <Tooltip title={"$" + commaMaker(betAmount)} key={betId + option}>
+            <div
+              className={`bet-details-option bet-details-option-${
+                option === winOption ? "win" : "loss"
+              }`}
+            >
+              {optionsObject[option]}
+            </div>
+          </Tooltip>
+        ))}
       </span>
     </div>
   );

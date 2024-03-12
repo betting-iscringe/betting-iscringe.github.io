@@ -12,7 +12,7 @@ const BettingHistory = (props) => {
       }}
     >
       {totalUserBets.toReversed().map((bet) => (
-        <BetDetails bet={bet} />
+        <BetDetails bet={bet} key={bet.betId} />
       ))}
     </div>
   );

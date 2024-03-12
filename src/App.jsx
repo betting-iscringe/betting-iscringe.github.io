@@ -33,9 +33,6 @@ export default function App() {
     initUserBets(dataHolder, userIdFilter);
   }, [userIdFilter, dataHolder]);
 
-  const handleSwitchClick = (value) => {
-    setShowDash(value);
-  };
   const handleRowClick = (value) => {
     setUserIdFilter(value);
     setShowDash(true);
@@ -95,7 +92,7 @@ export default function App() {
         loading={loading}
         refreshData={refreshData}
         showDash={showDash}
-        handleSwitchClick={handleSwitchClick}
+        handleSwitchClick={setShowDash}
       />
       {showDash && <Dashboard totalUserBets={totalUserBets} />}
       <BetsTable
