@@ -1,7 +1,10 @@
-import BettingHistory from "./BettingHistory";
+import { lazy, Suspense } from "react";
+import { Spin } from "antd";
 import Container from "./Container";
 import ProfitGraph from "./ProfitGraph";
 import Stats from "./Stats";
+
+const BettingHistory = lazy(() => import("./BettingHistory"));
 
 export default function Dashboard(props) {
   const { totalUserBets } = props;
@@ -32,7 +35,9 @@ export default function Dashboard(props) {
         }}
       >
         <Container title="Bet History" maxHeight={760}>
-          <BettingHistory totalUserBets={totalUserBets} />
+          <Suspense fallback={<Spin size="large" />}>
+            <BettingHistory totalUserBets={totalUserBets} />
+          </Suspense>
         </Container>
       </div>
     </div>

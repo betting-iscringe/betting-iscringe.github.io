@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import { message } from "antd";
+import { useState, useEffect, lazy, Suspense } from "react";
+import { message, Spin } from "antd";
 import "./styles.css";
 import { dataSource, mapping } from "../utils";
 
 import BetsTable from "./BetsTable";
 import Topbar from "./Topbar";
-import Dashboard from "./dashboards/Dashboard";
+const Dashboard = lazy(() => import("./dashboards/Dashboard"));
 
 export default function App() {
   const [categories, setCategories] = useState([]);
@@ -70,9 +70,6 @@ export default function App() {
     setTreeData(treeDataHolder);
     if (resetVisible) {
       setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
-    } else {
-      setCheckedKeys(checkedKeys);
-      setExpandedKeys(expandedKeys);
     }
     setLoading(false);
   };
@@ -94,7 +91,11 @@ export default function App() {
         showDash={showDash}
         handleSwitchClick={setShowDash}
       />
-      {showDash && <Dashboard totalUserBets={totalUserBets} />}
+      {showDash && (
+        <Suspense fallback={<Spin size="large" />}>
+          <Dashboard totalUserBets={totalUserBets} />
+        </Suspense>
+      )}
       <BetsTable
         hide={showDash}
         handleRowClick={handleRowClick}
