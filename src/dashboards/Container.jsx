@@ -32,6 +32,7 @@ export default function Container(props) {
     prefix = "",
     changeColor = false,
     isBar,
+    countup = true,
   } = props;
   if (minWidth) {
     additionalStyles.minWidth = minWidth;
@@ -83,7 +84,7 @@ export default function Container(props) {
           title={props.title}
           value={props.value}
           precision={2}
-          formatter={typeof props.value === "number" && formatter}
+          formatter={typeof props.value === "number" && countup && formatter}
           prefix={prefix}
           valueStyle={{ ...addtionalStatValueStyle }}
         />

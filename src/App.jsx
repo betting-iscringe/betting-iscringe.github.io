@@ -75,7 +75,7 @@ export default function App() {
   };
 
   return (
-    <div className="App" style={{ padding: 20 }}>
+    <div className="App">
       <Topbar
         events={categories}
         setEvents={setCategories}

@@ -1,13 +1,15 @@
 import { lazy, Suspense } from "react";
 import { Spin } from "antd";
 import Container from "./Container";
-import ProfitGraph from "./ProfitGraph";
+
 import Stats from "./Stats";
 
+const ProfitGraph = lazy(() => import("./ProfitGraph"));
 const BettingHistory = lazy(() => import("./BettingHistory"));
 
 export default function Dashboard(props) {
   const { totalUserBets } = props;
+  const hasBets = totalUserBets?.length !== 0;
 
   return (
     <div
@@ -18,13 +20,17 @@ export default function Dashboard(props) {
         width: "100%",
         flexWrap: "wrap",
         boxSizing: "border-box",
-        maxHeight: "calc(96vh - 44px)",
+        height: "calc(96vh - 68px)",
         minHeight: 0,
       }}
     >
       <Stats totalUserBets={totalUserBets} />
       <Container title="Profit/Loss" minWidth={300} grow>
-        <ProfitGraph totalUserBets={totalUserBets} />
+        {hasBets && (
+          <Suspense fallback={<Spin size="large" />}>
+            <ProfitGraph totalUserBets={totalUserBets} />
+          </Suspense>
+        )}
       </Container>
       <div
         style={{
@@ -32,12 +38,16 @@ export default function Dashboard(props) {
           flexDirection: "column",
           gap: 4,
           flexShrink: 1,
+          height: "calc(96vh - 44px)",
+          maxHeight: 760,
         }}
       >
-        <Container title="Bet History" maxHeight={760}>
-          <Suspense fallback={<Spin size="large" />}>
-            <BettingHistory totalUserBets={totalUserBets} />
-          </Suspense>
+        <Container title="Bet History" grow>
+          {hasBets && (
+            <Suspense fallback={<Spin size="large" />}>
+              <BettingHistory totalUserBets={totalUserBets} />
+            </Suspense>
+          )}
         </Container>
       </div>
     </div>

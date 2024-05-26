@@ -33,6 +33,7 @@ const BetDetails = (props) => {
           value={initial}
           changeColor
           prefix={"$"}
+          countup={false}
         />
       </span>
 
