@@ -14,6 +14,7 @@ const BetDetails = (props) => {
       winning,
       totalPool,
     },
+    animation = true,
   } = props;
   let initial = userBets.reduce((acc, userBet) => {
     const { betAmount, option } = userBet;
@@ -33,7 +34,7 @@ const BetDetails = (props) => {
           value={initial}
           changeColor
           prefix={"$"}
-          countup={false}
+          countup={animation}
         />
       </span>
 

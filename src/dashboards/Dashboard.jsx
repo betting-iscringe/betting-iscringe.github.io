@@ -36,18 +36,15 @@ export default function Dashboard(props) {
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: 4,
           flexShrink: 1,
           height: "calc(96vh - 44px)",
           maxHeight: 760,
+          width: 400,
+          maxWidth: "90vw",
         }}
       >
         <Container title="Bet History" grow>
-          {hasBets && (
-            <Suspense fallback={<Spin size="large" />}>
-              <BettingHistory totalUserBets={totalUserBets} />
-            </Suspense>
-          )}
+          <BettingHistory totalUserBets={totalUserBets} />
         </Container>
       </div>
     </div>
