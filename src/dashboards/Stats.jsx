@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import StatDisplay from "./StatsDisplay";
-
 
 const Stats = (props) => {
   const { totalUserBets } = props;
-  const [betCount, setBetCount] = useState(0);
-  const [profit, setProfit] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
-  const [betResults, setBetResults] = useState();
 
-  useEffect(() => {
+  const {
+    betCount = 0,
+    profit = 0,
+    totalAmount = 0,
+    betResults = 0,
+  } = useMemo(() => {
     let betNumber = 0;
     let totalBetAmount = 0;
-    const profit = totalUserBets.reduce((acc, bet) => {
+    const userProfit = totalUserBets.reduce((acc, bet) => {
       const { totalPool, winOption, winning, userBets } = bet;
       userBets.forEach(({ betAmount, option }) => {
         betNumber += 1;
@@ -38,10 +38,12 @@ const Stats = (props) => {
       },
       { win: 0, lose: 0 }
     );
-    setBetResults(winLoss);
-    setBetCount(betNumber);
-    setProfit(profit);
-    setTotalAmount(totalBetAmount);
+    return {
+      betCount: betNumber,
+      profit: userProfit,
+      totalAmount: totalBetAmount,
+      betResults: winLoss,
+    };
   }, [totalUserBets]);
 
   return (

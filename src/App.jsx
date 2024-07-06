@@ -1,7 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { message, Spin } from "antd";
 import "./styles.css";
-import { dataSource, mapping } from "../utils";
+import { compareArrays, dataSource, mapping } from "../utils";
 
 import BetsTable from "./BetsTable";
 import Topbar from "./Topbar";
@@ -9,8 +9,12 @@ const Dashboard = lazy(() => import("./dashboards/Dashboard"));
 
 export default function App() {
   const [categories, setCategories] = useState([]);
-  const [usernameFilter, setUsernameFilter] = useState("");
+  const [prevCategories, setPrevCategories] = useState([]);
+
   const [userIdFilter, setUserIdFilter] = useState("");
+  const [prevUserIdFilter, setPrevUserIdFilter] = useState("");
+
+  const [usernameFilter, setUsernameFilter] = useState("");
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [dataHolder, setDataHolder] = useState({});
   const [eventHolder, setEventHolder] = useState([]);
@@ -24,14 +28,7 @@ export default function App() {
     getInitialData();
   }, []);
 
-  useEffect(() => {
-    document.title = `Nasfaq ${categories.join(", ")} betting board`;
-    if (categories.length > 0) getData(categories);
-  }, [categories]);
-
-  useEffect(() => {
-    initUserBets(dataHolder, userIdFilter);
-  }, [userIdFilter, dataHolder]);
+ 
 
   const handleRowClick = (value) => {
     setUserIdFilter(value);
@@ -71,8 +68,20 @@ export default function App() {
     if (resetVisible) {
       setCheckedKeys(keysHolder.filter((key) => !key.startsWith("EVENT_")));
     }
+    initUserBets(totalData, userIdFilter);
     setLoading(false);
   };
+
+  if (!compareArrays(categories, prevCategories)) {
+    document.title = `Nasfaq ${categories.join(", ")} betting board`;
+    setPrevCategories(categories);
+    if (categories.length > 0) getData(categories);
+  }
+
+  if (userIdFilter !== prevUserIdFilter) {
+    initUserBets(dataHolder, userIdFilter);
+    setPrevUserIdFilter(userIdFilter);
+  }
 
   return (
     <div className="App">

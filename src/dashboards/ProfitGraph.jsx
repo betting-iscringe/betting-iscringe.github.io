@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer } from "recharts";
 import { commaMaker, COLORS } from "../../utils";
 
@@ -20,10 +20,8 @@ const Dot = (props) => (
 );
 export default function ProfitGraph(props) {
   const { totalUserBets } = props;
-  const [offset, setOffset] = useState(0);
-  const [profitTimeline, setProfitTimeline] = useState([]);
 
-  useEffect(() => {
+  const { offset = 0, profitTimeline = [] } = useMemo(() => {
     let initial = 0;
     const profitTimeline = totalUserBets.map((bet, i) => {
       const { totalPool, winOption, winning, userBets } = bet;
@@ -36,8 +34,7 @@ export default function ProfitGraph(props) {
       });
       return { x: bet.closingTime + i, y: initial };
     });
-    setOffset(gradientOffset(profitTimeline));
-    setProfitTimeline(profitTimeline);
+    return { offset: gradientOffset(profitTimeline), profitTimeline };
   }, [totalUserBets]);
 
   const generateDots = ({ value, ...rest }) => {

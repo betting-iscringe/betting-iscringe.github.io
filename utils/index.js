@@ -10,4 +10,14 @@ const COLORS = {
   DARK_GREEN: "#3f8600",
 };
 
-export { dataSource, headerAndParams, mapping, commaMaker, COLORS };
+const compareArrays = (a, b) =>
+  a.length === b.length && a.every((element, index) => element === b[index]);
+
+export {
+  dataSource,
+  headerAndParams,
+  mapping,
+  commaMaker,
+  COLORS,
+  compareArrays,
+};
