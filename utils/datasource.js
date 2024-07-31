@@ -22,7 +22,7 @@ const getDefault = async () => {
   const {
     data: { defaults },
   } = await dataSource.get(`/data`, headerAndParams);
-  return defaults;
+  return defaults.map((i) => i.toLowerCase());
 };
 
 const getCategory = async (category) => {
