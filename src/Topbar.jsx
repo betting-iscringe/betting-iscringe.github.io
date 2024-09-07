@@ -7,7 +7,7 @@ import "./Topbar.css";
 
 const { Option } = Select;
 const { Title } = Typography;
-const options = ["hfz", "divegrass", "etc"];
+const options = ["hfz", "divegrass", "vtrp", "etc" ];
 
 export default (props) => {
   const {
