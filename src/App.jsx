@@ -37,7 +37,9 @@ export default function App() {
 
   const getInitialData = async () => {
     const { defaults, files } = await dataSource.getIndexValues();
-    setOptionList(files);
+    if (files?.length > 0) {
+      setOptionList(files);
+    }
     setCategories(defaults);
   };
 
