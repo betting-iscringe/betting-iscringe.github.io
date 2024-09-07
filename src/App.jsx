@@ -6,9 +6,11 @@ import { compareArrays, dataSource, mapping } from "../utils";
 import BetsTable from "./BetsTable";
 import Topbar from "./Topbar";
 const Dashboard = lazy(() => import("./dashboards/Dashboard"));
+const options = ["hfz", "divegrass", "vtrp", "etc"];
 
 export default function App() {
   const [categories, setCategories] = useState([]);
+  const [optionList, setOptionList] = useState(options);
   const [prevCategories, setPrevCategories] = useState([]);
 
   const [userIdFilter, setUserIdFilter] = useState("");
@@ -28,15 +30,14 @@ export default function App() {
     getInitialData();
   }, []);
 
- 
-
   const handleRowClick = (value) => {
     setUserIdFilter(value);
     setShowDash(true);
   };
 
   const getInitialData = async () => {
-    const defaults = await dataSource.getDefault();
+    const { defaults, files } = await dataSource.getIndexValues();
+    setOptionList(files);
     setCategories(defaults);
   };
 
@@ -86,6 +87,7 @@ export default function App() {
   return (
     <div className="App">
       <Topbar
+        options={optionList}
         events={categories}
         setEvents={setCategories}
         setUsernameFilter={showDash ? setUserIdFilter : setUsernameFilter}

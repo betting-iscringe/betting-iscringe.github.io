@@ -18,11 +18,14 @@ const dataSource = axios.create({
   },
 });
 
-const getDefault = async () => {
+const getIndexValues = async () => {
   const {
-    data: { defaults },
+    data: { defaults, files },
   } = await dataSource.get(`/data`, headerAndParams);
-  return defaults.map((i) => i.toLowerCase());
+  return {
+    defaults: defaults.map((i) => i.toLowerCase()),
+    files: files.map(({ value }) => value.slice(1)),
+  };
 };
 
 const getCategory = async (category) => {
@@ -83,7 +86,7 @@ const getAllEvents = async (categories) => {
 };
 
 export default {
-  getDefault,
+  getIndexValues,
   getCategory,
   getEvent,
   getAllEvents,
